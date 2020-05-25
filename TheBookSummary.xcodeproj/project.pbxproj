@@ -58,13 +58,12 @@
 		EF85434F247BB02400EAADA9 /* TheBookSummary */ = {
 			isa = PBXGroup;
 			children = (
+				EF854367247BBD4B00EAADA9 /* StoryBoards */,
 				EF854364247BB8F200EAADA9 /* Model */,
 				EF854350247BB02400EAADA9 /* AppDelegate.swift */,
 				EF854352247BB02400EAADA9 /* SceneDelegate.swift */,
 				EF854354247BB02400EAADA9 /* ViewController.swift */,
-				EF854356247BB02400EAADA9 /* Main.storyboard */,
 				EF854359247BB02400EAADA9 /* Assets.xcassets */,
-				EF85435B247BB02400EAADA9 /* LaunchScreen.storyboard */,
 				EF85435E247BB02400EAADA9 /* Info.plist */,
 			);
 			path = TheBookSummary;
@@ -76,6 +75,15 @@
 				EF854365247BB92D00EAADA9 /* Genres.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EF854367247BBD4B00EAADA9 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				EF854356247BB02400EAADA9 /* Main.storyboard */,
+				EF85435B247BB02400EAADA9 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

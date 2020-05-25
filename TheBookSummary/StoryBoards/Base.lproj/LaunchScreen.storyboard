@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fiction" translatesAutoresizingMaskIntoConstraints="NO" id="AeR-gL-6rS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJR-El-IAM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Summary" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9K-dI-tXE">
+                                        <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="QJ8-CV-SdS"/>
+                                            <constraint firstAttribute="width" constant="300" id="fNu-qh-IxB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="55"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="shadowColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="0.74649507705479445" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="x9K-dI-tXE" firstAttribute="centerY" secondItem="LJR-El-IAM" secondAttribute="centerY" id="GDb-Md-R0b"/>
+                                    <constraint firstItem="x9K-dI-tXE" firstAttribute="centerX" secondItem="LJR-El-IAM" secondAttribute="centerX" id="vwc-iB-QAs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AeR-gL-6rS" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="8tX-1C-sTC"/>
+                            <constraint firstAttribute="bottom" secondItem="AeR-gL-6rS" secondAttribute="bottom" id="9s2-IN-G1n"/>
+                            <constraint firstItem="AeR-gL-6rS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="BG6-SE-2dj"/>
+                            <constraint firstItem="LJR-El-IAM" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Ega-MW-qlY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AeR-gL-6rS" secondAttribute="trailing" id="GSF-ZZ-qty"/>
+                            <constraint firstAttribute="bottom" secondItem="LJR-El-IAM" secondAttribute="bottom" id="Np7-N5-gDu"/>
+                            <constraint firstItem="LJR-El-IAM" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="iZ2-ur-1C1"/>
+                            <constraint firstAttribute="trailing" secondItem="LJR-El-IAM" secondAttribute="trailing" id="iZt-TL-GU5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fiction" width="699" height="960"/>
+    </resources>
+</document>
