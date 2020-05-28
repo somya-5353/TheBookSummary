@@ -44,4 +44,5 @@ class GenreCollectionCell:UICollectionViewCell {
         self.layer.shadowOffset = CGSize(width: 4, height: 4)
         self.clipsToBounds = false
     }
+    
 }

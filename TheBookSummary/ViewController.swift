@@ -15,11 +15,12 @@ class ViewController: UIViewController{
     var listOfGenres = Genres.getGenres()
     
     override func viewDidLoad() {
-         super.viewDidLoad()
+        super.viewDidLoad()
          // Do any additional setup after loading the view.
          setUpNavigation()
         frontView?.dataSource = self as? UICollectionViewDataSource
-         calculateCellSizeAndLayout()
+        frontView?.delegate = self as? UICollectionViewDelegate
+        calculateCellSizeAndLayout()
           
                                          
     }
@@ -45,9 +46,22 @@ class ViewController: UIViewController{
         let layout = frontView!.collectionViewLayout as! UICollectionViewFlowLayout
         
         layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
-        frontView?.contentInset = UIEdgeInsets(top: Yinset, left: Xinset, bottom: Yinset, right: Xinset)
+        frontView?.contentInset = UIEdgeInsets(top: Xinset, left: Yinset, bottom: Yinset, right: Xinset+20.0)
+        
+    }
+}
+
+extension ViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return listOfGenres.count
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "genreCell", for: indexPath) as! GenreCollectionCell
+        cell.selectedGenre = listOfGenres[indexPath.item]
+        return cell
+        
+    }
 }
 
