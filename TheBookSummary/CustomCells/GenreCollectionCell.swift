@@ -34,4 +34,14 @@ class GenreCollectionCell:UICollectionViewCell {
             self.displayView = nil
         }
     }
+    
+    //change the corner radius and shadow of the collection cell
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.layer.cornerRadius = 4.0
+        self.layer.shadowRadius = 4.0
+        self.layer.shadowOpacity = 0.7
+        self.layer.shadowOffset = CGSize(width: 4, height: 4)
+        self.clipsToBounds = false
+    }
 }
