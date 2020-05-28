@@ -8,14 +8,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
+    @IBOutlet weak var frontView: UICollectionView!
+    
+    var listOfGenres = Genres.getGenres()
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        setUpNavigation()
-                                        
-   }
+         super.viewDidLoad()
+         // Do any additional setup after loading the view.
+         setUpNavigation()
+        frontView?.dataSource = self as? UICollectionViewDataSource
+         calculateCellSizeAndLayout()
+          
+                                         
+    }
     
    //func to customize the navigation bar
     func setUpNavigation() {
@@ -26,6 +33,21 @@ class ViewController: UIViewController {
                                                                          NSAttributedString.Key.font: UIFont(name: "Bradley Hand", size: 24)!,]
     }
 
-
+    //function to dtermine the collection cell size and layouts
+    func calculateCellSizeAndLayout() {
+        
+        let screenSize = UIScreen.main.bounds.size
+        let cellWidth = floor(screenSize.width * 0.6)
+        let cellHeight = floor(screenSize.height * 0.6)
+        let Xinset = (view.bounds.width - cellWidth)/2.0
+        let Yinset = (view.bounds.height - cellHeight)/2.0
+        
+        let layout = frontView!.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+        frontView?.contentInset = UIEdgeInsets(top: Yinset, left: Xinset, bottom: Yinset, right: Xinset)
+    }
+    
+    
 }
 

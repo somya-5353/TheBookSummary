@@ -21,7 +21,7 @@ class Genres {
         self.displayColor = displayColor
     }
     
-    func getGenres() -> [Genres] {
+    static func getGenres() -> [Genres] {
         
         var genreList:[Genres] = []
         genreList.append(Genres(genreName: "Fiction", displayImage: UIImage(named: "fiction1")!, displayColor: UIColor(red: 0/255.0, green: 255/255.0, blue: 255/255.0, alpha: 0.8)))

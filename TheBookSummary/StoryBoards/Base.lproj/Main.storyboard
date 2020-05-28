@@ -26,7 +26,7 @@
                                     <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mn0-IK-kgh" customClass="GenreCollectionCell" customModule="TheBookSummary" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="genreCell" id="mn0-IK-kgh" customClass="GenreCollectionCell" customModule="TheBookSummary" customModuleProvider="target">
                                         <rect key="frame" x="20" y="43.5" width="276" height="637"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gcI-j9-RIS">
@@ -90,6 +90,9 @@
                     <navigationItem key="navigationItem" id="2n0-6Y-bLY">
                         <nil key="title"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="frontView" destination="Ym1-0c-UdW" id="NHQ-Ic-SBA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
