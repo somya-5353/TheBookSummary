@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fiction" translatesAutoresizingMaskIntoConstraints="NO" id="AeR-gL-6rS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book6" translatesAutoresizingMaskIntoConstraints="NO" id="AeR-gL-6rS">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LJR-El-IAM">
@@ -31,10 +31,10 @@
                                         <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="55"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="shadowColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="shadowColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="0.72993364726027399" colorSpace="custom" customColorSpace="sRGB"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="0.74649507705479445" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="0.37473244863013688" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="x9K-dI-tXE" firstAttribute="centerY" secondItem="LJR-El-IAM" secondAttribute="centerY" id="GDb-Md-R0b"/>
                                     <constraint firstItem="x9K-dI-tXE" firstAttribute="centerX" secondItem="LJR-El-IAM" secondAttribute="centerX" id="vwc-iB-QAs"/>
@@ -61,6 +61,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fiction" width="699" height="960"/>
+        <image name="book6" width="960" height="638"/>
     </resources>
 </document>

@@ -28,7 +28,7 @@ class ViewController: UIViewController{
    //func to customize the navigation bar
     func setUpNavigation() {
         
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 72/255.0, green: 61/255.0, blue: 139/255.0, alpha: 0.5)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
         self.navigationItem.title = "Book  Summary"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
                                                                          NSAttributedString.Key.font: UIFont(name: "Bradley Hand", size: 24)!,]
@@ -45,7 +45,7 @@ class ViewController: UIViewController{
         
         let layout = frontView!.collectionViewLayout as! UICollectionViewFlowLayout
         
-        layout.itemSize = CGSize(width: cellWidth, height: cellHeight)
+        layout.itemSize = CGSize(width: cellWidth, height: cellHeight+20)
         frontView?.contentInset = UIEdgeInsets(top: Xinset, left: Yinset, bottom: Yinset, right: Xinset+20.0)
         
     }
