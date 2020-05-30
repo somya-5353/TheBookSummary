@@ -18,7 +18,7 @@ class GenreTabBarViewController: UITabBarController {
    //function to lay out the tab initial bar  settings
     func setUpTabBar() {
         
-        self.tabBar.barTintColor = UIColor.black
+        self.tabBar.barTintColor = UIColor(red: 178/255.0, green: 34/255.0, blue: 34/255.0, alpha: 0.3)
         let homeVC = HomeViewController()
         homeVC.view.backgroundColor = UIColor.white
       
