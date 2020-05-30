@@ -33,6 +33,7 @@ class GenreCollectionCell:UICollectionViewCell {
             self.title = nil
             self.displayView = nil
         }
+        self.contentView.isUserInteractionEnabled = false
     }
     
     //change the corner radius and shadow of the collection cell

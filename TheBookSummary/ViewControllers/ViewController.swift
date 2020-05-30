@@ -20,10 +20,11 @@ class ViewController: UIViewController{
          setUpNavigation()
         frontView?.dataSource = self as? UICollectionViewDataSource
         frontView?.delegate = self as? UICollectionViewDelegate
+        frontView?.isUserInteractionEnabled = true
+        frontView?.allowsSelection = true
         calculateCellSizeAndLayout()
           
-                                         
-    }
+   }
     
    //func to customize the navigation bar
     func setUpNavigation() {
@@ -49,8 +50,8 @@ class ViewController: UIViewController{
         frontView?.contentInset = UIEdgeInsets(top: Xinset, left: Yinset, bottom: Yinset, right: Xinset+20.0)
         
     }
+    
 }
-
 extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -62,6 +63,17 @@ extension ViewController: UICollectionViewDataSource {
         cell.selectedGenre = listOfGenres[indexPath.item]
         return cell
         
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView,  didSelectItemAt indexPath: IndexPath) {
+        
+        
+        print("Hello")
+        let tabVc = GenreTabBarViewController()
+        self.navigationController?.pushViewController(tabVc, animated: false)
     }
 }
 
