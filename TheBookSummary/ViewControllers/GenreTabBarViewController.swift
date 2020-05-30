@@ -12,19 +12,22 @@ class GenreTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setUpTabBar()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   //function to lay out the tab initial bar  settings
+    func setUpTabBar() {
+        
+        self.tabBar.barTintColor = UIColor.black
+        let homeVC = HomeViewController()
+        homeVC.view.backgroundColor = UIColor.white
+      
+        homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .mostViewed, tag: 1)
+        let secondVC = FavouritesViewController()
+        secondVC.view.backgroundColor = UIColor.white
+        secondVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
+        self.viewControllers = [homeVC, secondVC]
+        self.selectedViewController = homeVC
     }
-    */
 
 }
