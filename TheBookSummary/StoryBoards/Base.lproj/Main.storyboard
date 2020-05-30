@@ -98,6 +98,57 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="100.44642857142857"/>
         </scene>
+        <!--Item 2-->
+        <scene sceneID="mIk-pq-zK9">
+            <objects>
+                <viewController id="1ax-jO-Noc" customClass="FavouritesViewController" customModule="TheBookSummary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bSY-Ii-p48">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tj7-Qr-ahp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Hla-0U-Whd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MzB-dU-YOZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2728" y="684"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="UrO-w9-Bzv">
+            <objects>
+                <viewController id="pHA-Ni-C5P" customClass="HomeViewController" customModule="TheBookSummary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yAh-Jd-oYm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="y1l-O9-7GJ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="H29-aG-Goj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ILJ-rp-6ny" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2728" y="37"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="y4K-m1-JDX">
+            <objects>
+                <tabBarController id="e5l-B4-vxs" customClass="TabBarViewController" customModule="TheBookSummary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jKl-e6-8la">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pHA-Ni-C5P" kind="relationship" relationship="viewControllers" id="TnH-NL-Bdu"/>
+                        <segue destination="1ax-jO-Noc" kind="relationship" relationship="viewControllers" id="ST7-5y-zmf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sHV-B8-W7j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808" y="360"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="f1d-mu-EHq">
             <objects>

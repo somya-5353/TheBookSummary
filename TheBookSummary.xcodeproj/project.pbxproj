@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF26F7E32482813F003C8322 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26F7E22482813F003C8322 /* TabBarViewController.swift */; };
+		EF26F7E524828180003C8322 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26F7E424828180003C8322 /* HomeViewController.swift */; };
+		EF26F7E72482819C003C8322 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26F7E62482819C003C8322 /* FavouritesViewController.swift */; };
 		EF854351247BB02400EAADA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF854350247BB02400EAADA9 /* AppDelegate.swift */; };
 		EF854353247BB02400EAADA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF854352247BB02400EAADA9 /* SceneDelegate.swift */; };
 		EF854355247BB02400EAADA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF854354247BB02400EAADA9 /* ViewController.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF26F7E22482813F003C8322 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		EF26F7E424828180003C8322 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		EF26F7E62482819C003C8322 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		EF85434D247BB02400EAADA9 /* TheBookSummary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBookSummary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF854350247BB02400EAADA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF854352247BB02400EAADA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF26F7E8248281A9003C8322 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				EF26F7E22482813F003C8322 /* TabBarViewController.swift */,
+				EF26F7E424828180003C8322 /* HomeViewController.swift */,
+				EF26F7E62482819C003C8322 /* FavouritesViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		EF854344247BB02400EAADA9 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +76,7 @@
 		EF85434F247BB02400EAADA9 /* TheBookSummary */ = {
 			isa = PBXGroup;
 			children = (
+				EF26F7E8248281A9003C8322 /* TabBar */,
 				EF862A15247FC42000BF6AD7 /* CustomCells */,
 				EF854367247BBD4B00EAADA9 /* StoryBoards */,
 				EF854364247BB8F200EAADA9 /* Model */,
@@ -168,10 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF26F7E72482819C003C8322 /* FavouritesViewController.swift in Sources */,
 				EF854355247BB02400EAADA9 /* ViewController.swift in Sources */,
 				EF862A19247FC47000BF6AD7 /* GenreCollectionCell.swift in Sources */,
 				EF854351247BB02400EAADA9 /* AppDelegate.swift in Sources */,
 				EF854353247BB02400EAADA9 /* SceneDelegate.swift in Sources */,
+				EF26F7E32482813F003C8322 /* TabBarViewController.swift in Sources */,
+				EF26F7E524828180003C8322 /* HomeViewController.swift in Sources */,
 				EF854366247BB92D00EAADA9 /* Genres.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
