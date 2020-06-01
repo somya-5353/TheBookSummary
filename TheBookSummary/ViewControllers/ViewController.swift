@@ -29,8 +29,9 @@ class ViewController: UIViewController{
    //func to customize the navigation bar
     func setUpNavigation() {
         
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 178/255.0, green: 34/255.0, blue: 34/255.0, alpha: 0.8)
-        self.navigationItem.title = "Book  Summary"
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 75/255.0, green: 0/255.0, blue: 130/255.0, alpha: 0.8)
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationItem.title = "Book Summary"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
                                                                          NSAttributedString.Key.font: UIFont(name: "Bradley Hand", size: 24)!,]
     }
@@ -73,6 +74,7 @@ extension ViewController: UICollectionViewDelegate {
         
         print("Hello")
         let tabVc = GenreTabBarViewController()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationController?.pushViewController(tabVc, animated: false)
     }
 }
