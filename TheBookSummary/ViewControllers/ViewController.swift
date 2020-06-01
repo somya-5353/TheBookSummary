@@ -61,7 +61,7 @@ extension ViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "genreCell", for: indexPath) as! GenreCollectionCell
-        cell.selectedGenre = listOfGenres[indexPath.item]
+        cell.Genre = listOfGenres[indexPath.item]
         return cell
         
     }

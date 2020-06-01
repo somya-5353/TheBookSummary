@@ -15,7 +15,9 @@ class GenreCollectionCell:UICollectionViewCell {
     @IBOutlet weak var displayView: UIView!
     @IBOutlet weak var displayImage: UIImageView!
     
-    var selectedGenre:Genres? {
+    var selectedGenre:GenresAvailable = .unknown
+    
+    var Genre:Genres? {
         didSet {
             self.setUpCell()
         }
@@ -23,10 +25,11 @@ class GenreCollectionCell:UICollectionViewCell {
     
     //function to set up the the custom collection cell
     func setUpCell() {
-        if let genre = selectedGenre {
+        if let genre = Genre {
             self.displayImage.image = genre.displayImage
             self.title.text = genre.genreName
             self.displayView.backgroundColor = genre.displayColor
+            self.selectedGenre = genre.selectedGenre
             
         } else {
             self.displayImage = nil
