@@ -135,7 +135,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5Ow-Nn-aKm">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bookCell" id="5Ow-Nn-aKm" customClass="BookCollectionCell" customModule="TheBookSummary" customModuleProvider="target">
                                         <rect key="frame" x="57" y="0.0" width="300" height="430"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Aof-fW-Ucf">
@@ -166,6 +166,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="300" height="430"/>
+                                        <connections>
+                                            <outlet property="bookCoverImage" destination="UlR-nz-ZH7" id="dje-1F-oqj"/>
+                                            <outlet property="bookTitle" destination="MxY-jN-ts3" id="760-Uz-Pgp"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -180,6 +184,9 @@
                         <viewLayoutGuide key="safeArea" id="y1l-O9-7GJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="H29-aG-Goj"/>
+                    <connections>
+                        <outlet property="bookView" destination="oWR-76-Ydy" id="QKX-Vx-B8w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ILJ-rp-6ny" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

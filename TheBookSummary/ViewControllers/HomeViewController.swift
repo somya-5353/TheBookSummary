@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var bookView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
