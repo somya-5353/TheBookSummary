@@ -25,11 +25,13 @@ class GenreTabBarViewController: UITabBarController {
         self.tabBar.tintColor = UIColor.white
         let homeVC = HomeViewController()
         homeVC.view.backgroundColor = UIColor.white
-      
+        homeVC.selectedGenre = self.selectedGenre
         homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .mostViewed, tag: 1)
+        
         let secondVC = FavouritesViewController()
         secondVC.view.backgroundColor = UIColor.white
         secondVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
+        
         self.viewControllers = [homeVC, secondVC]
         self.selectedViewController = homeVC
     }

@@ -19,7 +19,7 @@ class Categories {
         self.coverImage = coverImage
     }
     
-    func getBooksForCategory(genre: GenresAvailable) -> [Categories] {
+   static func getBooksForCategory(genre: GenresAvailable) -> [Categories] {
         var listOfBooks:[Categories] = []
         
         if genre == .fiction {

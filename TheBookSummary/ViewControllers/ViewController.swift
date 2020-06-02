@@ -17,7 +17,7 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
          // Do any additional setup after loading the view.
-         setUpNavigation()
+        setUpNavigation()
         frontView?.dataSource = self as? UICollectionViewDataSource
         frontView?.delegate = self as? UICollectionViewDelegate
         frontView?.isUserInteractionEnabled = true
