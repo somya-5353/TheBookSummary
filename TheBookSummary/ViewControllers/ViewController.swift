@@ -29,7 +29,7 @@ class ViewController: UIViewController{
    //func to customize the navigation bar
     func setUpNavigation() {
         
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 75/255.0, green: 0/255.0, blue: 130/255.0, alpha: 0.8)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 51/255.0, green: 0/255.0, blue: 51/255.0, alpha: 0.8)
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationItem.title = "Book Summary"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
