@@ -71,9 +71,8 @@ extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView,  didSelectItemAt indexPath: IndexPath) {
         
-        
-        print("Hello")
         let tabVc = GenreTabBarViewController()
+        tabVc.selectedGenre = listOfGenres[indexPath.item].selectedGenre
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationController?.pushViewController(tabVc, animated: false)
     }

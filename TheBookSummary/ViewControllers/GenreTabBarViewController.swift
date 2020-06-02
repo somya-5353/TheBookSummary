@@ -9,6 +9,8 @@
 import UIKit
 
 class GenreTabBarViewController: UITabBarController {
+    
+    var selectedGenre: GenresAvailable = .unknown
 
     override func viewDidLoad() {
         super.viewDidLoad()
