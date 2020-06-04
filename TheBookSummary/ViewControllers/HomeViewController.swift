@@ -28,8 +28,18 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         bookView?.delegate = self as? UICollectionViewDelegate
         bookView?.isUserInteractionEnabled = true
         bookView?.allowsSelection = true
+        let selectedGenre = selectionDelegate?.getSelectedGenre() ?? .unknown
+        let title = selectedGenre.rawValue
+        
     }
    
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      let selectedGenre = selectionDelegate?.getSelectedGenre() ?? .unknown
+      let title = selectedGenre.rawValue
+      self.tabBarController?.navigationItem.title = title
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         let selectedGenre = selectionDelegate?.getSelectedGenre() ?? .unknown
