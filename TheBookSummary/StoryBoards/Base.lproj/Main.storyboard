@@ -175,9 +175,6 @@
                                         <connections>
                                             <outlet property="bookCoverImage" destination="UlR-nz-ZH7" id="dje-1F-oqj"/>
                                             <outlet property="bookTitle" destination="MxY-jN-ts3" id="760-Uz-Pgp"/>
-                                            <segue destination="dol-NR-1iN" kind="popoverPresentation" popoverAnchorView="5Ow-Nn-aKm" id="1ys-27-Zgx">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -200,21 +197,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ILJ-rp-6ny" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2726.0869565217395" y="36.830357142857139"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="lCg-Fn-lgG">
-            <objects>
-                <viewController id="dol-NR-1iN" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3QO-nI-3Ji">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="F1g-0a-hgK"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sRx-on-Rs1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3860" y="22"/>
         </scene>
         <!--Genre Tab Bar View Controller-->
         <scene sceneID="y4K-m1-JDX">

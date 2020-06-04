@@ -82,14 +82,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		EF079D76248965960076711B /* SupportingFiles */ = {
-			isa = PBXGroup;
-			children = (
-				EF85435E247BB02400EAADA9 /* Info.plist */,
-			);
-			path = SupportingFiles;
-			sourceTree = "<group>";
-		};
 		EF079D78248966A10076711B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +136,7 @@
 				EF079D7B24896E3F0076711B /* CoreData */,
 				EF854364247BB8F200EAADA9 /* Model */,
 				EF854367247BBD4B00EAADA9 /* StoryBoards */,
-				EF079D76248965960076711B /* SupportingFiles */,
+				EF85435E247BB02400EAADA9 /* Info.plist */,
 				EF079D75248965490076711B /* Resources */,
 			);
 			path = TheBookSummary;
