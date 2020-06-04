@@ -24,8 +24,7 @@ class Categories {
         
         if genre == .fiction {
         listOfBooks.append(Categories(title: "Alchemist", coverImage: UIImage(named: "alchemist")!))
-        listOfBooks.append(Categories(title: "All The Light We Cannot See", coverImage: UIImage(named: "alchemist")!))
-        listOfBooks.append(Categories(title: "Alchemist", coverImage: UIImage(named: "allthelightthatyoucannotsee")!))
+        listOfBooks.append(Categories(title: "All The Light We Cannot See", coverImage: UIImage(named: "allthelightthatyoucannotsee")!))
         listOfBooks.append(Categories(title: "Gone Girl", coverImage: UIImage(named: "gonegirl")!))
         listOfBooks.append(Categories(title: "Inferno", coverImage: UIImage(named: "inferno")!))
         listOfBooks.append(Categories(title: "Little Fires Everywhere", coverImage: UIImage(named: "littlefireseverywhere")!))

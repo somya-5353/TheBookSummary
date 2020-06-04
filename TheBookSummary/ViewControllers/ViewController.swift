@@ -13,6 +13,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var frontView: UICollectionView!
     
     var listOfGenres = Genres.getGenres()
+    var selectedGenre:GenresAvailable = .unknown
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,10 +72,30 @@ extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView,  didSelectItemAt indexPath: IndexPath) {
         
+        self.selectedGenre = listOfGenres[indexPath.item].selectedGenre
         let tabVc = GenreTabBarViewController()
-        tabVc.selectedGenre = listOfGenres[indexPath.item].selectedGenre
+        let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
+        homeVC.selectionDelegate = self
+        homeVC.view.backgroundColor = UIColor.white
+        homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .mostViewed, tag: 1)
+        
+        let secondVC = FavouritesViewController()
+        secondVC.view.backgroundColor = UIColor.white
+        secondVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
+        tabVc.viewControllers = [homeVC, secondVC]
+        tabVc.selectedViewController = homeVC
+        
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         self.navigationController?.pushViewController(tabVc, animated: false)
     }
 }
 
+extension ViewController: GenreSelectionDelegation {
+    
+    func getSelectedGenre() -> GenresAvailable? {
+       let genre = self.selectedGenre
+        return genre
+    }
+    
+}

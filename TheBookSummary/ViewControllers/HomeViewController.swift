@@ -8,14 +8,21 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDataSource {
+protocol GenreSelectionDelegation {
+    func getSelectedGenre() -> GenresAvailable?
+}
+
+class HomeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var bookView: UICollectionView!
     
-    var selectedGenre: GenresAvailable = .unknown
-    let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
+    var selectionDelegate:GenreSelectionDelegation!
+    
+    private let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
+    private let numberOfItemsInRow = 2
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         bookView?.dataSource = self as? UICollectionViewDataSource
         bookView?.delegate = self as? UICollectionViewDelegate
@@ -23,24 +30,52 @@ class HomeViewController: UIViewController, UICollectionViewDataSource {
         bookView?.allowsSelection = true
     }
    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        let selectedGenre = selectionDelegate?.getSelectedGenre() ?? .unknown
         let listOfBooks = Categories.getBooksForCategory(genre: selectedGenre)
         return listOfBooks.count
        }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bookCell", for: indexPath) as! BookCollectionCell
+        let selectedGenre = selectionDelegate?.getSelectedGenre() ?? .unknown
         let listOfBooks = Categories.getBooksForCategory(genre: selectedGenre)
         cell.category = listOfBooks[indexPath.item]
+        cell.bookTitle.numberOfLines = 0
+        cell.bookTitle.adjustsFontSizeToFitWidth = true
         return cell
         
        }
 }
     
+extension HomeViewController:UICollectionViewDelegateFlowLayout {
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let noOfCellsInRow = 2
+
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+
+        let totalSpace = flowLayout.sectionInset.left
+            + flowLayout.sectionInset.right
+            + (flowLayout.minimumInteritemSpacing * CGFloat(noOfCellsInRow - 1))
+
+        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(noOfCellsInRow))
+
+        return CGSize(width: size - 2, height: size+100)
+    }
+   
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 2
+    }
+}
     
 

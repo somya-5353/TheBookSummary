@@ -26,6 +26,8 @@ class BookCollectionCell: UICollectionViewCell {
         if let category = category {
             self.bookCoverImage.image = category.coverImage
             self.bookTitle.text = category.title
+            self.bookTitle.numberOfLines = 0
+            self.bookTitle.adjustsFontSizeToFitWidth = true
         } else {
             self.bookCoverImage.image = nil
             self.bookTitle.text = ""

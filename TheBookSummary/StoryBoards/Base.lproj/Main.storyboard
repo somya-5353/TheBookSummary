@@ -120,23 +120,23 @@
         <!--Item 1-->
         <scene sceneID="UrO-w9-Bzv">
             <objects>
-                <viewController id="pHA-Ni-C5P" customClass="HomeViewController" customModule="TheBookSummary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="pHA-Ni-C5P" customClass="HomeViewController" customModule="TheBookSummary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yAh-Jd-oYm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oWR-76-Ydy">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oWR-76-Ydy">
+                                <rect key="frame" x="5" y="49" width="404" height="764"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eaL-9d-aZu">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eaL-9d-aZu">
                                     <size key="itemSize" width="204" height="283"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bookCell" id="5Ow-Nn-aKm" customClass="BookCollectionCell" customModule="TheBookSummary" customModuleProvider="target">
-                                        <rect key="frame" x="57" y="0.0" width="300" height="430"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" reuseIdentifier="bookCell" id="5Ow-Nn-aKm" customClass="BookCollectionCell" customModule="TheBookSummary">
+                                        <rect key="frame" x="52" y="0.0" width="300" height="430"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Aof-fW-Ucf">
                                             <rect key="frame" x="0.0" y="0.0" width="300" height="430"/>
@@ -144,27 +144,33 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alchemist" translatesAutoresizingMaskIntoConstraints="NO" id="UlR-nz-ZH7">
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="375"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="T6P-uL-3P8"/>
+                                                        <constraint firstAttribute="width" constant="200" id="UQ1-ce-eND"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alchemist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxY-jN-ts3">
-                                                    <rect key="frame" x="50" y="387" width="200" height="38"/>
+                                                    <rect key="frame" x="8" y="385" width="284" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="38" id="IoW-hM-RoO"/>
-                                                        <constraint firstAttribute="width" constant="200" id="JbL-p3-gqQ"/>
+                                                        <constraint firstAttribute="height" constant="40" id="IoW-hM-RoO"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate-Light" family="Copperplate" pointSize="33"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="UlR-nz-ZH7" firstAttribute="top" secondItem="Aof-fW-Ucf" secondAttribute="top" id="Cfb-vJ-vNU"/>
+                                                <constraint firstItem="MxY-jN-ts3" firstAttribute="leading" secondItem="Aof-fW-Ucf" secondAttribute="leading" constant="8" id="XCq-31-yKL"/>
                                                 <constraint firstItem="UlR-nz-ZH7" firstAttribute="leading" secondItem="Aof-fW-Ucf" secondAttribute="leading" id="dyU-gU-dje"/>
                                                 <constraint firstAttribute="trailing" secondItem="UlR-nz-ZH7" secondAttribute="trailing" id="fQY-ji-OL5"/>
                                                 <constraint firstAttribute="bottom" secondItem="MxY-jN-ts3" secondAttribute="bottom" constant="5" id="kh9-XE-Ceo"/>
                                                 <constraint firstItem="MxY-jN-ts3" firstAttribute="centerX" secondItem="Aof-fW-Ucf" secondAttribute="centerX" id="pTi-df-tRG"/>
+                                                <constraint firstAttribute="trailing" secondItem="MxY-jN-ts3" secondAttribute="trailing" constant="8" id="t7o-3U-iWS"/>
                                                 <constraint firstAttribute="bottom" secondItem="UlR-nz-ZH7" secondAttribute="bottom" constant="55" id="wp4-dO-cNd"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="300" height="430"/>
                                         <connections>
                                             <outlet property="bookCoverImage" destination="UlR-nz-ZH7" id="dje-1F-oqj"/>
@@ -176,16 +182,16 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="oWR-76-Ydy" firstAttribute="top" secondItem="y1l-O9-7GJ" secondAttribute="top" id="Txa-s0-DHe"/>
-                            <constraint firstItem="y1l-O9-7GJ" firstAttribute="trailing" secondItem="oWR-76-Ydy" secondAttribute="trailing" id="Wjh-tN-Gcl"/>
-                            <constraint firstItem="oWR-76-Ydy" firstAttribute="leading" secondItem="y1l-O9-7GJ" secondAttribute="leading" id="p0R-4P-8se"/>
+                            <constraint firstItem="oWR-76-Ydy" firstAttribute="top" secondItem="y1l-O9-7GJ" secondAttribute="top" constant="5" id="Txa-s0-DHe"/>
+                            <constraint firstItem="y1l-O9-7GJ" firstAttribute="trailing" secondItem="oWR-76-Ydy" secondAttribute="trailing" constant="5" id="Wjh-tN-Gcl"/>
+                            <constraint firstItem="oWR-76-Ydy" firstAttribute="leading" secondItem="y1l-O9-7GJ" secondAttribute="leading" constant="5" id="p0R-4P-8se"/>
                             <constraint firstItem="y1l-O9-7GJ" firstAttribute="bottom" secondItem="oWR-76-Ydy" secondAttribute="bottom" id="rkc-4S-1U9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="y1l-O9-7GJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="H29-aG-Goj"/>
                     <connections>
-                        <outlet property="bookView" destination="oWR-76-Ydy" id="QKX-Vx-B8w"/>
+                        <outlet property="bookView" destination="oWR-76-Ydy" id="6Sw-cd-PdY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ILJ-rp-6ny" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
