@@ -10,10 +10,10 @@ import CoreData
 
 final class CoreDataManager {
     
-    private var model: String
+    private var modelName: String
     
-    init(model: String) {
-        self.model = model
+    init(modelName: String) {
+        self.modelName = modelName
     }
     
     
@@ -26,7 +26,7 @@ final class CoreDataManager {
     
     private lazy var managedObjectModel: NSManagedObjectModel = {
         
-        guard let modelURL = Bundle.main.url(forResource: self.model, withExtension: "momd") else {
+        guard let modelURL = Bundle.main.url(forResource: self.modelName, withExtension: "momd") else {
             fatalError("Unable to find Data Model")
         }
         guard let managedObjectModel = NSManagedObjectModel(contentsOf: modelURL) else {
@@ -40,7 +40,7 @@ final class CoreDataManager {
         let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         
         let fileManager = FileManager.default
-        let storeName = "\(self.model).sqlite"
+        let storeName = "\(self.modelName).sqlite"
         
         var documentsDirectoryUrl = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
         

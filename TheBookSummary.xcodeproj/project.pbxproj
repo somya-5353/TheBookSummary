@@ -11,6 +11,7 @@
 		EF079D702486ADFD0076711B /* BookCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF079D6F2486ADFD0076711B /* BookCollectionCell.swift */; };
 		EF079D722489382D0076711B /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF079D712489382D0076711B /* SummaryViewController.swift */; };
 		EF079D7A248966CC0076711B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF079D79248966CC0076711B /* CoreDataManager.swift */; };
+		EF079D7E24896E8B0076711B /* Favourites.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF079D7C24896E8B0076711B /* Favourites.xcdatamodeld */; };
 		EF26F7E32482813F003C8322 /* GenreTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26F7E22482813F003C8322 /* GenreTabBarViewController.swift */; };
 		EF26F7E524828180003C8322 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26F7E424828180003C8322 /* HomeViewController.swift */; };
 		EF26F7E72482819C003C8322 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF26F7E62482819C003C8322 /* FavouritesViewController.swift */; };
@@ -29,6 +30,7 @@
 		EF079D6F2486ADFD0076711B /* BookCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionCell.swift; sourceTree = "<group>"; };
 		EF079D712489382D0076711B /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		EF079D79248966CC0076711B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		EF079D7D24896E8B0076711B /* Favourites.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Favourites.xcdatamodel; sourceTree = "<group>"; };
 		EF26F7E22482813F003C8322 /* GenreTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreTabBarViewController.swift; sourceTree = "<group>"; };
 		EF26F7E424828180003C8322 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EF26F7E62482819C003C8322 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		EF079D7B24896E3F0076711B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				EF079D7C24896E8B0076711B /* Favourites.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		EF26F7E8248281A9003C8322 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +141,7 @@
 				EF26F7E8248281A9003C8322 /* ViewControllers */,
 				EF862A15247FC42000BF6AD7 /* CustomCells */,
 				EF079D78248966A10076711B /* Managers */,
+				EF079D7B24896E3F0076711B /* CoreData */,
 				EF854364247BB8F200EAADA9 /* Model */,
 				EF854367247BBD4B00EAADA9 /* StoryBoards */,
 				EF079D76248965960076711B /* SupportingFiles */,
@@ -238,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF26F7E72482819C003C8322 /* FavouritesViewController.swift in Sources */,
+				EF079D7E24896E8B0076711B /* Favourites.xcdatamodeld in Sources */,
 				EF854355247BB02400EAADA9 /* ViewController.swift in Sources */,
 				EF079D702486ADFD0076711B /* BookCollectionCell.swift in Sources */,
 				EF862A19247FC47000BF6AD7 /* GenreCollectionCell.swift in Sources */,
@@ -444,6 +456,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EF079D7C24896E8B0076711B /* Favourites.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EF079D7D24896E8B0076711B /* Favourites.xcdatamodel */,
+			);
+			currentVersion = EF079D7D24896E8B0076711B /* Favourites.xcdatamodel */;
+			path = Favourites.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EF854345247BB02400EAADA9 /* Project object */;
 }
