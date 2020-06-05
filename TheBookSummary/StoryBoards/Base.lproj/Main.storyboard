@@ -210,10 +210,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juL-Ca-omE">
-                                <rect key="frame" x="57" y="20" width="300" height="450"/>
+                                <rect key="frame" x="57" y="20" width="300" height="480"/>
                                 <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="450" id="pnq-1i-Yyv"/>
+                                    <constraint firstAttribute="height" constant="480" id="pnq-1i-Yyv"/>
                                     <constraint firstAttribute="width" constant="300" id="rWh-Qs-zee"/>
                                 </constraints>
                             </view>
@@ -223,6 +223,28 @@
                                     <constraint firstAttribute="height" constant="300" id="wXc-ei-6bg"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Alchemist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJR-cn-FgW">
+                                <rect key="frame" x="82" y="380" width="250" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="RqA-eO-rvU"/>
+                                    <constraint firstAttribute="height" constant="50" id="VbM-rT-1Nr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="4" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Paulo Coelho" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGq-p3-dMn">
+                                <rect key="frame" x="82" y="445" width="250" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Gua-2L-xz3"/>
+                                    <constraint firstAttribute="height" constant="30" id="p9T-bc-Eer"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -231,7 +253,11 @@
                             <constraint firstItem="CiC-tQ-AWh" firstAttribute="leading" secondItem="UrE-NO-19n" secondAttribute="leadingMargin" constant="35" id="LWE-3L-eer"/>
                             <constraint firstItem="juL-Ca-omE" firstAttribute="top" secondItem="Exm-6G-1fh" secondAttribute="top" constant="20" id="M9X-Zh-JCt"/>
                             <constraint firstItem="CiC-tQ-AWh" firstAttribute="centerX" secondItem="UrE-NO-19n" secondAttribute="centerX" id="Mxt-l9-u7Z"/>
+                            <constraint firstItem="lJR-cn-FgW" firstAttribute="centerX" secondItem="UrE-NO-19n" secondAttribute="centerX" id="O56-r3-jDG"/>
                             <constraint firstItem="juL-Ca-omE" firstAttribute="centerX" secondItem="UrE-NO-19n" secondAttribute="centerX" id="Psq-9P-26d"/>
+                            <constraint firstItem="jGq-p3-dMn" firstAttribute="top" secondItem="lJR-cn-FgW" secondAttribute="bottom" constant="15" id="YhH-L6-oek"/>
+                            <constraint firstItem="lJR-cn-FgW" firstAttribute="top" secondItem="CiC-tQ-AWh" secondAttribute="bottom" constant="30" id="bSH-Ww-glk"/>
+                            <constraint firstItem="jGq-p3-dMn" firstAttribute="centerX" secondItem="UrE-NO-19n" secondAttribute="centerX" id="woj-JU-IiY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Exm-6G-1fh"/>
                     </view>
