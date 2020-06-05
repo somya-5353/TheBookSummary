@@ -55,8 +55,21 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         cell.bookTitle.numberOfLines = 0
         cell.bookTitle.adjustsFontSizeToFitWidth = true
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-       }
+        self.performSegue(withIdentifier: "collectionSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "collectionSegue" {
+            if let vc = segue.destination as? SummaryViewController {
+                
+            }
+        }
+    }
 }
     
 extension HomeViewController:UICollectionViewDelegateFlowLayout {
@@ -88,4 +101,3 @@ extension HomeViewController:UICollectionViewDelegateFlowLayout {
     }
 }
     
-

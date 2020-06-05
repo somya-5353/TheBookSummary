@@ -18,7 +18,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="topRight" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ym1-0c-UdW">
                                 <rect key="frame" x="10" y="128" width="394" height="724"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="35" id="tQ9-9p-mSL">
                                     <size key="itemSize" width="200" height="400"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -127,7 +127,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oWR-76-Ydy">
                                 <rect key="frame" x="5" y="49" width="404" height="764"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eaL-9d-aZu">
                                     <size key="itemSize" width="204" height="283"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -180,7 +180,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oWR-76-Ydy" firstAttribute="top" secondItem="y1l-O9-7GJ" secondAttribute="top" constant="5" id="Txa-s0-DHe"/>
                             <constraint firstItem="y1l-O9-7GJ" firstAttribute="trailing" secondItem="oWR-76-Ydy" secondAttribute="trailing" constant="5" id="Wjh-tN-Gcl"/>
@@ -192,11 +192,53 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="H29-aG-Goj"/>
                     <connections>
                         <outlet property="bookView" destination="oWR-76-Ydy" id="6Sw-cd-PdY"/>
+                        <segue destination="qw5-RG-B5V" kind="popoverPresentation" identifier="collectionSegue" popoverAnchorView="oWR-76-Ydy" id="63k-u7-m1Y">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ILJ-rp-6ny" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2726.0869565217395" y="36.830357142857139"/>
+        </scene>
+        <!--Summary View Controller-->
+        <scene sceneID="pvZ-Cz-dXX">
+            <objects>
+                <viewController id="qw5-RG-B5V" customClass="SummaryViewController" customModule="TheBookSummary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UrE-NO-19n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juL-Ca-omE">
+                                <rect key="frame" x="57" y="20" width="300" height="450"/>
+                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="pnq-1i-Yyv"/>
+                                    <constraint firstAttribute="width" constant="300" id="rWh-Qs-zee"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alchemist" translatesAutoresizingMaskIntoConstraints="NO" id="CiC-tQ-AWh">
+                                <rect key="frame" x="55" y="50" width="304" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="wXc-ei-6bg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CiC-tQ-AWh" firstAttribute="top" secondItem="UrE-NO-19n" secondAttribute="top" constant="50" id="C7O-zR-XZj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CiC-tQ-AWh" secondAttribute="trailing" constant="35" id="IfD-4v-Hsv"/>
+                            <constraint firstItem="CiC-tQ-AWh" firstAttribute="leading" secondItem="UrE-NO-19n" secondAttribute="leadingMargin" constant="35" id="LWE-3L-eer"/>
+                            <constraint firstItem="juL-Ca-omE" firstAttribute="top" secondItem="Exm-6G-1fh" secondAttribute="top" constant="20" id="M9X-Zh-JCt"/>
+                            <constraint firstItem="CiC-tQ-AWh" firstAttribute="centerX" secondItem="UrE-NO-19n" secondAttribute="centerX" id="Mxt-l9-u7Z"/>
+                            <constraint firstItem="juL-Ca-omE" firstAttribute="centerX" secondItem="UrE-NO-19n" secondAttribute="centerX" id="Psq-9P-26d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Exm-6G-1fh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vb0-pY-yrV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3623.188405797102" y="242.41071428571428"/>
         </scene>
         <!--Genre Tab Bar View Controller-->
         <scene sceneID="y4K-m1-JDX">
