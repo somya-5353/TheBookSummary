@@ -210,21 +210,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juL-Ca-omE">
-                                <rect key="frame" x="57" y="20" width="300" height="480"/>
+                                <rect key="frame" x="37" y="20" width="340" height="450"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Api-Il-0vg">
+                                        <rect key="frame" x="300" y="0.0" width="40" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="BHD-ax-LVo"/>
+                                            <constraint firstAttribute="width" constant="40" id="Te7-v2-5ow"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Bookmark"/>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="480" id="pnq-1i-Yyv"/>
-                                    <constraint firstAttribute="width" constant="300" id="rWh-Qs-zee"/>
+                                    <constraint firstItem="Api-Il-0vg" firstAttribute="top" secondItem="juL-Ca-omE" secondAttribute="top" id="O8O-La-sbm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Api-Il-0vg" secondAttribute="trailing" id="Sgy-R1-lNr"/>
+                                    <constraint firstAttribute="height" constant="450" id="pnq-1i-Yyv"/>
+                                    <constraint firstAttribute="width" constant="340" id="rWh-Qs-zee"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alchemist" translatesAutoresizingMaskIntoConstraints="NO" id="CiC-tQ-AWh">
-                                <rect key="frame" x="55" y="50" width="304" height="300"/>
+                                <rect key="frame" x="60" y="60" width="294" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="wXc-ei-6bg"/>
+                                    <constraint firstAttribute="height" constant="250" id="wXc-ei-6bg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Alchemist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJR-cn-FgW">
-                                <rect key="frame" x="82" y="380" width="250" height="50"/>
+                                <rect key="frame" x="82" y="340" width="250" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="RqA-eO-rvU"/>
@@ -236,7 +248,7 @@
                                 <size key="shadowOffset" width="4" height="-1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="by Paulo Coelho" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGq-p3-dMn">
-                                <rect key="frame" x="82" y="445" width="250" height="30"/>
+                                <rect key="frame" x="82" y="405" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Gua-2L-xz3"/>
                                     <constraint firstAttribute="height" constant="30" id="p9T-bc-Eer"/>
@@ -245,18 +257,33 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeO-RK-hKD">
+                                <rect key="frame" x="82" y="678" width="250" height="60"/>
+                                <color key="backgroundColor" red="0.22349709272384644" green="0.069792360067367554" blue="0.29660168290138245" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="078-N8-3bZ"/>
+                                    <constraint firstAttribute="width" constant="250" id="tmY-ch-N9w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="24"/>
+                                <size key="titleShadowOffset" width="6" height="-2"/>
+                                <state key="normal" title="Go to Summary">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="CiC-tQ-AWh" firstAttribute="top" secondItem="UrE-NO-19n" secondAttribute="top" constant="50" id="C7O-zR-XZj"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CiC-tQ-AWh" secondAttribute="trailing" constant="35" id="IfD-4v-Hsv"/>
-                            <constraint firstItem="CiC-tQ-AWh" firstAttribute="leading" secondItem="UrE-NO-19n" secondAttribute="leadingMargin" constant="35" id="LWE-3L-eer"/>
+                            <constraint firstItem="XeO-RK-hKD" firstAttribute="centerX" secondItem="UrE-NO-19n" secondAttribute="centerX" id="Aw4-8s-nej"/>
+                            <constraint firstItem="CiC-tQ-AWh" firstAttribute="top" secondItem="UrE-NO-19n" secondAttribute="top" constant="60" id="C7O-zR-XZj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CiC-tQ-AWh" secondAttribute="trailing" constant="40" id="IfD-4v-Hsv"/>
+                            <constraint firstItem="CiC-tQ-AWh" firstAttribute="leading" secondItem="UrE-NO-19n" secondAttribute="leadingMargin" constant="40" id="LWE-3L-eer"/>
                             <constraint firstItem="juL-Ca-omE" firstAttribute="top" secondItem="Exm-6G-1fh" secondAttribute="top" constant="20" id="M9X-Zh-JCt"/>
                             <constraint firstItem="CiC-tQ-AWh" firstAttribute="centerX" secondItem="UrE-NO-19n" secondAttribute="centerX" id="Mxt-l9-u7Z"/>
                             <constraint firstItem="lJR-cn-FgW" firstAttribute="centerX" secondItem="UrE-NO-19n" secondAttribute="centerX" id="O56-r3-jDG"/>
                             <constraint firstItem="juL-Ca-omE" firstAttribute="centerX" secondItem="UrE-NO-19n" secondAttribute="centerX" id="Psq-9P-26d"/>
                             <constraint firstItem="jGq-p3-dMn" firstAttribute="top" secondItem="lJR-cn-FgW" secondAttribute="bottom" constant="15" id="YhH-L6-oek"/>
                             <constraint firstItem="lJR-cn-FgW" firstAttribute="top" secondItem="CiC-tQ-AWh" secondAttribute="bottom" constant="30" id="bSH-Ww-glk"/>
+                            <constraint firstItem="Exm-6G-1fh" firstAttribute="bottom" secondItem="XeO-RK-hKD" secondAttribute="bottom" constant="70" id="lns-3f-R6S"/>
                             <constraint firstItem="jGq-p3-dMn" firstAttribute="centerX" secondItem="UrE-NO-19n" secondAttribute="centerX" id="woj-JU-IiY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Exm-6G-1fh"/>
@@ -305,6 +332,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Bookmark" width="120" height="200"/>
         <image name="alchemist" width="90" height="139.5"/>
         <image name="leadership" width="960" height="720"/>
     </resources>
