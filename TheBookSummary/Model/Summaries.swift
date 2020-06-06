@@ -18,7 +18,4 @@ class Summaries {
         self.summary = summary
     }
     
-    static func getSummary(title: String) -> String {
-        
-    }
 }

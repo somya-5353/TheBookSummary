@@ -371,10 +371,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wmH-hL-1G5">
+                                <rect key="frame" x="-5" y="130" width="385" height="527"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="bsx-U1-d5G"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="PTD-Qg-vFq"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="1aH-uq-hYz"/>
+                            </scrollView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="55b-Sv-SG1">
-                                <rect key="frame" x="15" y="150" width="345" height="487"/>
+                                <rect key="frame" x="15" y="155" width="345" height="450"/>
                                 <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="450" id="g7x-p7-cVG"/>
+                                </constraints>
+                                <mutableString key="text">A recurring dream troubles Santiago, a young and adventurous Andalusian shepherd. He has the dream every time he sleeps under a sycamore tree that grows out of the ruins of a church. During the dream, a child tells him to seek treasure at the foot of the Egyptian pyramids. Santiago consults a gypsy woman to interpret the dream, and to his surprise she tells him to go to Egypt. A strange, magical old man named Melchizedek, who claims to be the King of Salem, echoes the gypsy’s advice and tells Santiago that it is his Personal Legend to journey to the pyramids. Melchizedek convinces Santiago to sell his flock and set off to Tangier. When Santiago arrives in Tangier, a thief robs him, forcing him to find work with a local crystal merchant. The conservative and kindly merchant teaches Santiago several lessons, and Santiago encourages the merchant to take risks with his business. The risks pay off, and Santiago becomes a rich man in just a year.</mutableString>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -382,18 +393,21 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wmH-hL-1G5" secondAttribute="trailing" constant="10" id="2Q1-19-a5d"/>
                             <constraint firstItem="JGD-r9-M5g" firstAttribute="top" secondItem="sTq-kh-Iqy" secondAttribute="top" constant="20" id="9mK-2T-bXt"/>
                             <constraint firstItem="jCC-tL-Ons" firstAttribute="top" secondItem="NvF-TK-6BN" secondAttribute="bottom" constant="30" id="Ba7-M3-K4J"/>
-                            <constraint firstItem="sTq-kh-Iqy" firstAttribute="trailing" secondItem="55b-Sv-SG1" secondAttribute="trailing" constant="15" id="CKT-Nf-6jO"/>
-                            <constraint firstItem="55b-Sv-SG1" firstAttribute="top" secondItem="jCC-tL-Ons" secondAttribute="bottom" constant="10" id="DFR-Zr-8A9"/>
                             <constraint firstItem="jCC-tL-Ons" firstAttribute="centerX" secondItem="PRO-sz-kx1" secondAttribute="centerX" id="GJh-VV-bqI"/>
-                            <constraint firstItem="sTq-kh-Iqy" firstAttribute="bottom" secondItem="55b-Sv-SG1" secondAttribute="bottom" constant="10" id="IAn-JB-atq"/>
-                            <constraint firstItem="55b-Sv-SG1" firstAttribute="centerX" secondItem="PRO-sz-kx1" secondAttribute="centerX" id="KeR-zO-RSO"/>
-                            <constraint firstItem="55b-Sv-SG1" firstAttribute="leading" secondItem="sTq-kh-Iqy" secondAttribute="leading" constant="15" id="VSb-Rx-cQY"/>
+                            <constraint firstItem="55b-Sv-SG1" firstAttribute="top" secondItem="jCC-tL-Ons" secondAttribute="bottom" constant="15" id="HwL-XO-yIf"/>
+                            <constraint firstItem="55b-Sv-SG1" firstAttribute="centerX" secondItem="PRO-sz-kx1" secondAttribute="centerX" id="Ikf-sU-WVz"/>
+                            <constraint firstAttribute="bottom" secondItem="wmH-hL-1G5" secondAttribute="bottom" constant="10" id="Nqx-FX-qaF"/>
                             <constraint firstItem="NvF-TK-6BN" firstAttribute="leading" secondItem="PRO-sz-kx1" secondAttribute="leading" id="YqJ-lx-Dya"/>
                             <constraint firstAttribute="trailing" secondItem="NvF-TK-6BN" secondAttribute="trailing" id="ahK-vS-D66"/>
                             <constraint firstItem="NvF-TK-6BN" firstAttribute="top" secondItem="PRO-sz-kx1" secondAttribute="top" id="asW-av-iVb"/>
                             <constraint firstItem="JGD-r9-M5g" firstAttribute="centerX" secondItem="PRO-sz-kx1" secondAttribute="centerX" id="cAr-9I-B2z"/>
+                            <constraint firstItem="55b-Sv-SG1" firstAttribute="leading" secondItem="sTq-kh-Iqy" secondAttribute="leading" constant="15" id="etl-J3-4O3"/>
+                            <constraint firstItem="sTq-kh-Iqy" firstAttribute="trailing" secondItem="55b-Sv-SG1" secondAttribute="trailing" constant="15" id="iEX-0X-jXq"/>
+                            <constraint firstItem="wmH-hL-1G5" firstAttribute="centerX" secondItem="PRO-sz-kx1" secondAttribute="centerX" id="jm9-sR-Szt"/>
+                            <constraint firstItem="wmH-hL-1G5" firstAttribute="leading" secondItem="PRO-sz-kx1" secondAttribute="leading" constant="10" id="rzo-pl-f7z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sTq-kh-Iqy"/>
                     </view>

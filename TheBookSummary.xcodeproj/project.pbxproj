@@ -25,6 +25,7 @@
 		EF862A19247FC47000BF6AD7 /* GenreCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF862A18247FC47000BF6AD7 /* GenreCollectionCell.swift */; };
 		EFCA6347248BFFBF00A93914 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA6346248BFFBF00A93914 /* DetailViewController.swift */; };
 		EFCA6349248C14C600A93914 /* Summaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA6348248C14C600A93914 /* Summaries.swift */; };
+		EFCA634D248C18C300A93914 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA634C248C18C300A93914 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		EF862A18247FC47000BF6AD7 /* GenreCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionCell.swift; sourceTree = "<group>"; };
 		EFCA6346248BFFBF00A93914 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EFCA6348248C14C600A93914 /* Summaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summaries.swift; sourceTree = "<group>"; };
+		EFCA634C248C18C300A93914 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +181,17 @@
 		EFCA634A248C169300A93914 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EFCA634B248C187100A93914 /* ConstantsSummary */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		EFCA634B248C187100A93914 /* ConstantsSummary */ = {
+			isa = PBXGroup;
+			children = (
+				EFCA634C248C18C300A93914 /* Constants.swift */,
+			);
+			path = ConstantsSummary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 				EF079D702486ADFD0076711B /* BookCollectionCell.swift in Sources */,
 				EF862A19247FC47000BF6AD7 /* GenreCollectionCell.swift in Sources */,
 				EF079D722489382D0076711B /* SummaryViewController.swift in Sources */,
+				EFCA634D248C18C300A93914 /* Constants.swift in Sources */,
 				EF854351247BB02400EAADA9 /* AppDelegate.swift in Sources */,
 				EF079D7A248966CC0076711B /* CoreDataManager.swift in Sources */,
 				EF854353247BB02400EAADA9 /* SceneDelegate.swift in Sources */,
