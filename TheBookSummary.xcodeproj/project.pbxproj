@@ -23,6 +23,8 @@
 		EF85435D247BB02400EAADA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF85435B247BB02400EAADA9 /* LaunchScreen.storyboard */; };
 		EF854366247BB92D00EAADA9 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF854365247BB92D00EAADA9 /* Genres.swift */; };
 		EF862A19247FC47000BF6AD7 /* GenreCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF862A18247FC47000BF6AD7 /* GenreCollectionCell.swift */; };
+		EFCA6347248BFFBF00A93914 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA6346248BFFBF00A93914 /* DetailViewController.swift */; };
+		EFCA6349248C14C600A93914 /* Summaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA6348248C14C600A93914 /* Summaries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		EF85435E247BB02400EAADA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF854365247BB92D00EAADA9 /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
 		EF862A18247FC47000BF6AD7 /* GenreCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreCollectionCell.swift; sourceTree = "<group>"; };
+		EFCA6346248BFFBF00A93914 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		EFCA6348248C14C600A93914 /* Summaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summaries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				EF26F7E424828180003C8322 /* HomeViewController.swift */,
 				EF26F7E62482819C003C8322 /* FavouritesViewController.swift */,
 				EF079D712489382D0076711B /* SummaryViewController.swift */,
+				EFCA6346248BFFBF00A93914 /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			children = (
 				EF079D73248965010076711B /* AppDelegate */,
 				EF26F7E8248281A9003C8322 /* ViewControllers */,
+				EFCA634A248C169300A93914 /* Utils */,
 				EF862A15247FC42000BF6AD7 /* CustomCells */,
 				EF079D78248966A10076711B /* Managers */,
 				EF079D7B24896E3F0076711B /* CoreData */,
@@ -147,6 +153,7 @@
 			children = (
 				EF854365247BB92D00EAADA9 /* Genres.swift */,
 				EF079D6B24858A910076711B /* Categories.swift */,
+				EFCA6348248C14C600A93914 /* Summaries.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,6 +174,13 @@
 				EF079D6F2486ADFD0076711B /* BookCollectionCell.swift */,
 			);
 			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		EFCA634A248C169300A93914 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +256,7 @@
 			files = (
 				EF26F7E72482819C003C8322 /* FavouritesViewController.swift in Sources */,
 				EF079D7E24896E8B0076711B /* Favourites.xcdatamodeld in Sources */,
+				EFCA6349248C14C600A93914 /* Summaries.swift in Sources */,
 				EF854355247BB02400EAADA9 /* ViewController.swift in Sources */,
 				EF079D702486ADFD0076711B /* BookCollectionCell.swift in Sources */,
 				EF862A19247FC47000BF6AD7 /* GenreCollectionCell.swift in Sources */,
@@ -253,6 +268,7 @@
 				EF26F7E32482813F003C8322 /* GenreTabBarViewController.swift in Sources */,
 				EF26F7E524828180003C8322 /* HomeViewController.swift in Sources */,
 				EF854366247BB92D00EAADA9 /* Genres.swift in Sources */,
+				EFCA6347248BFFBF00A93914 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

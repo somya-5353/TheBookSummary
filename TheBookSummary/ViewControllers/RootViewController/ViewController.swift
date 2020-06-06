@@ -97,5 +97,5 @@ extension ViewController: GenreSelectionDelegation {
        let genre = self.selectedGenre
         return genre
     }
-    
 }
+

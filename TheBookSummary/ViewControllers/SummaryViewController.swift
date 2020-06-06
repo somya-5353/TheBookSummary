@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class SummaryViewController: UIViewController {
 
     @IBOutlet weak var topView: UIView!
@@ -50,6 +51,20 @@ class SummaryViewController: UIViewController {
     }
     
    @IBAction func onTapSummary(_ sender: Any) {
+    
+    self.performSegue(withIdentifier: "detailSegue", sender: self)
+   
+    
+    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "detailSegue" {
+           if let vc = segue.destination as? DetailViewController {
+             // vc.categoryItem = self.categoryItem
+           }
+        }
     }
     
     @IBAction func onTapBookmark(_ sender: Any) {

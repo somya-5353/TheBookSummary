@@ -301,6 +301,7 @@
                                 </state>
                                 <connections>
                                     <action selector="onTapSummary:" destination="qw5-RG-B5V" eventType="touchUpInside" id="pTK-Br-bia"/>
+                                    <segue destination="Fvs-Ib-heN" kind="presentation" identifier="detailSegue" modalTransitionStyle="flipHorizontal" id="fdO-pG-Zex"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -334,6 +335,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vb0-pY-yrV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3623.188405797102" y="242.41071428571428"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Mpa-Gu-ly5">
+            <objects>
+                <viewController storyboardIdentifier="detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fvs-Ib-heN" customClass="DetailViewController" customModule="TheBookSummary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PRO-sz-kx1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NvF-TK-6BN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="YIc-U7-JVy"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OVERVIEW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGD-r9-M5g">
+                                <rect key="frame" x="87.5" y="20" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="rY7-ZU-gMG"/>
+                                    <constraint firstAttribute="width" constant="200" id="sYm-0f-ojQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Alchemist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCC-tL-Ons">
+                                <rect key="frame" x="37.5" y="100" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7zJ-an-XPc"/>
+                                    <constraint firstAttribute="width" constant="300" id="WLo-RS-Glt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="55b-Sv-SG1">
+                                <rect key="frame" x="15" y="150" width="345" height="487"/>
+                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JGD-r9-M5g" firstAttribute="top" secondItem="sTq-kh-Iqy" secondAttribute="top" constant="20" id="9mK-2T-bXt"/>
+                            <constraint firstItem="jCC-tL-Ons" firstAttribute="top" secondItem="NvF-TK-6BN" secondAttribute="bottom" constant="30" id="Ba7-M3-K4J"/>
+                            <constraint firstItem="sTq-kh-Iqy" firstAttribute="trailing" secondItem="55b-Sv-SG1" secondAttribute="trailing" constant="15" id="CKT-Nf-6jO"/>
+                            <constraint firstItem="55b-Sv-SG1" firstAttribute="top" secondItem="jCC-tL-Ons" secondAttribute="bottom" constant="10" id="DFR-Zr-8A9"/>
+                            <constraint firstItem="jCC-tL-Ons" firstAttribute="centerX" secondItem="PRO-sz-kx1" secondAttribute="centerX" id="GJh-VV-bqI"/>
+                            <constraint firstItem="sTq-kh-Iqy" firstAttribute="bottom" secondItem="55b-Sv-SG1" secondAttribute="bottom" constant="10" id="IAn-JB-atq"/>
+                            <constraint firstItem="55b-Sv-SG1" firstAttribute="centerX" secondItem="PRO-sz-kx1" secondAttribute="centerX" id="KeR-zO-RSO"/>
+                            <constraint firstItem="55b-Sv-SG1" firstAttribute="leading" secondItem="sTq-kh-Iqy" secondAttribute="leading" constant="15" id="VSb-Rx-cQY"/>
+                            <constraint firstItem="NvF-TK-6BN" firstAttribute="leading" secondItem="PRO-sz-kx1" secondAttribute="leading" id="YqJ-lx-Dya"/>
+                            <constraint firstAttribute="trailing" secondItem="NvF-TK-6BN" secondAttribute="trailing" id="ahK-vS-D66"/>
+                            <constraint firstItem="NvF-TK-6BN" firstAttribute="top" secondItem="PRO-sz-kx1" secondAttribute="top" id="asW-av-iVb"/>
+                            <constraint firstItem="JGD-r9-M5g" firstAttribute="centerX" secondItem="PRO-sz-kx1" secondAttribute="centerX" id="cAr-9I-B2z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sTq-kh-Iqy"/>
+                    </view>
+                    <connections>
+                        <outlet property="summaryTextView" destination="55b-Sv-SG1" id="Nvw-eX-vPm"/>
+                        <outlet property="titleLabel" destination="jCC-tL-Ons" id="1Ww-Xh-DMf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CwW-rR-ZYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4424.8000000000002" y="254.12293853073464"/>
         </scene>
         <!--Genre Tab Bar View Controller-->
         <scene sceneID="y4K-m1-JDX">
