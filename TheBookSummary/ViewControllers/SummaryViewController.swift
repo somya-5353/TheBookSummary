@@ -10,6 +10,12 @@ import UIKit
 
 class SummaryViewController: UIViewController {
 
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var coverImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,14 +23,8 @@ class SummaryViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+   
+    @IBAction func onTapSummary(_ sender: Any) {
     }
-    */
-
+    
 }
