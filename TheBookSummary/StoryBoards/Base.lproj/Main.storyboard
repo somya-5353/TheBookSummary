@@ -204,7 +204,7 @@
         <!--Summary View Controller-->
         <scene sceneID="pvZ-Cz-dXX">
             <objects>
-                <viewController id="qw5-RG-B5V" customClass="SummaryViewController" customModule="TheBookSummary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="summary" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qw5-RG-B5V" customClass="SummaryViewController" customModule="TheBookSummary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UrE-NO-19n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -219,6 +219,9 @@
                                             <constraint firstAttribute="width" constant="40" id="Te7-v2-5ow"/>
                                         </constraints>
                                         <state key="normal" title="Button" image="Bookmark"/>
+                                        <connections>
+                                            <action selector="onTapBookmark:" destination="qw5-RG-B5V" eventType="touchUpInside" id="5oZ-Rw-n3U"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -322,6 +325,7 @@
                     </view>
                     <connections>
                         <outlet property="authorLabel" destination="jGq-p3-dMn" id="mT4-qa-kgW"/>
+                        <outlet property="bookmarkButton" destination="Api-Il-0vg" id="u7A-8q-a0x"/>
                         <outlet property="coverImage" destination="CiC-tQ-AWh" id="SuM-9Y-Ad8"/>
                         <outlet property="titleLabel" destination="lJR-cn-FgW" id="VHd-54-sLw"/>
                         <outlet property="topView" destination="juL-Ca-omE" id="02K-Ah-TUu"/>

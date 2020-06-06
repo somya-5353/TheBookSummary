@@ -17,6 +17,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var bookView: UICollectionView!
     
     var selectionDelegate:GenreSelectionDelegation!
+    var categoryItem:Categories?
     
     private let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
     private let numberOfItemsInRow = 2
@@ -59,6 +60,9 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let selectedGenre = selectionDelegate?.getSelectedGenre() ?? .unknown
+        let listOfBooks = Categories.getBooksForCategory(genre: selectedGenre)
+        self.categoryItem = listOfBooks[indexPath.item]
         self.performSegue(withIdentifier: "collectionSegue", sender: self)
     }
     
@@ -66,7 +70,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         if segue.identifier == "collectionSegue" {
             if let vc = segue.destination as? SummaryViewController {
-                
+                vc.categoryItem = self.categoryItem
             }
         }
     }
