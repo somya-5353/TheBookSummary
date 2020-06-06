@@ -37,7 +37,11 @@ class SummaryViewController: UIViewController {
         if let item = categoryItem {
             self.coverImage.image = item.coverImage
             self.titleLabel.text = item.title
+            if item.author == "" {
+                self.authorLabel.isHidden = true
+            } else {
             self.authorLabel.text = "by \(item.author)"
+            }
             self.titleLabel.numberOfLines = 0
             self.titleLabel.adjustsFontSizeToFitWidth = true
             self.authorLabel.adjustsFontSizeToFitWidth = true
@@ -62,7 +66,7 @@ class SummaryViewController: UIViewController {
         
         if segue.identifier == "detailSegue" {
            if let vc = segue.destination as? DetailViewController {
-             // vc.categoryItem = self.categoryItem
+              vc.selectedBook = self.categoryItem
            }
         }
     }
