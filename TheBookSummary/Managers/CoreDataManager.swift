@@ -7,13 +7,16 @@
 //
 
 import CoreData
+import UIKit
 
-final class CoreDataManager {
+final class CoreDataManager : NSObject {
     
     private var modelName: String
     
     init(modelName: String) {
         self.modelName = modelName
+         super.init()
+        self.setUpNotificationHandling()
     }
     
     
@@ -55,5 +58,26 @@ final class CoreDataManager {
         return persistentStoreCoordinator
     } ()
     
+    private func setUpNotificationHandling() {
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(saveChanges(_:)), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(saveChanges(_:)), name: UIApplication.willTerminateNotification, object: nil)
+    }
     
+    
+    @objc func saveChanges(_ notification: Notification) {
+        
+        saveChange()
+    }
+    
+    func saveChange() {
+        
+        guard managedObjectContext.hasChanges else { return }
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("Unable to set managed object context!!")
+        }
+    }
 }
