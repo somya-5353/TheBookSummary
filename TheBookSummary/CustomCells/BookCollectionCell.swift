@@ -28,8 +28,8 @@ class BookCollectionCell: UICollectionViewCell {
             self.bookTitle.text = category.title
             self.bookTitle.numberOfLines = 0
             self.bookTitle.adjustsFontSizeToFitWidth = true
-            self.bookCoverImage.layer.cornerRadius=30
-            self.bookCoverImage.layer.borderWidth=2.0
+            self.bookCoverImage.layer.cornerRadius = 30
+            self.bookCoverImage.layer.borderWidth = 2.0
             self.bookCoverImage.layer.masksToBounds = true
         } else {
             self.bookCoverImage.image = nil

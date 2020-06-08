@@ -26,6 +26,7 @@
 		EFCA6347248BFFBF00A93914 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA6346248BFFBF00A93914 /* DetailViewController.swift */; };
 		EFCA6349248C14C600A93914 /* Summaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA6348248C14C600A93914 /* Summaries.swift */; };
 		EFCA634D248C18C300A93914 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA634C248C18C300A93914 /* Constants.swift */; };
+		EFE734DF248ECDF800312873 /* FavouriteBookItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE734DE248ECDF800312873 /* FavouriteBookItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		EFCA6346248BFFBF00A93914 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EFCA6348248C14C600A93914 /* Summaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summaries.swift; sourceTree = "<group>"; };
 		EFCA634C248C18C300A93914 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EFE734DE248ECDF800312873 /* FavouriteBookItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBookItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			children = (
 				EF862A18247FC47000BF6AD7 /* GenreCollectionCell.swift */,
 				EF079D6F2486ADFD0076711B /* BookCollectionCell.swift */,
+				EFE734DE248ECDF800312873 /* FavouriteBookItemTableViewCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				EF26F7E32482813F003C8322 /* GenreTabBarViewController.swift in Sources */,
 				EF26F7E524828180003C8322 /* HomeViewController.swift in Sources */,
 				EF854366247BB92D00EAADA9 /* Genres.swift in Sources */,
+				EFE734DF248ECDF800312873 /* FavouriteBookItemTableViewCell.swift in Sources */,
 				EFCA6347248BFFBF00A93914 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
