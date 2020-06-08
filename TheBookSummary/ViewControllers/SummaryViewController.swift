@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 
 class SummaryViewController: UIViewController {
 
@@ -19,6 +19,7 @@ class SummaryViewController: UIViewController {
     
     var categoryItem: Categories?
     var isBookmarked = false
+    var managedObjectContext: NSManagedObjectContext?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,8 +77,27 @@ class SummaryViewController: UIViewController {
         isBookmarked = !isBookmarked
         if (!isBookmarked) {
            bookmarkButton.setImage(UIImage(named: "Bookmark"), for: .normal)
+           createFavouriteBookItem()
+            
         } else {
             bookmarkButton.setImage(UIImage(named: "uncheckedBookmark"), for: .normal)
         }
     }
+    
+    //function to add the bookmarked book to the favourites list
+    func createFavouriteBookItem() {
+        
+        guard let managedObjectContext = managedObjectContext else { return }
+        let favouritebook = FavouriteBook(context: managedObjectContext)
+        favouritebook.title = self.categoryItem?.title
+        favouritebook.author = self.categoryItem?.author
+        favouritebook.id = self.categoryItem?.summary
+        if let id = favouritebook.id {
+            let genre = Categories.getGenre(id: id)
+            favouritebook.genre = genre.rawValue
+        }
+        
+        
+    }
+    
 }

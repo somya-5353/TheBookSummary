@@ -104,7 +104,7 @@
         <!--Item 2-->
         <scene sceneID="mIk-pq-zK9">
             <objects>
-                <viewController id="1ax-jO-Noc" customClass="FavouritesViewController" customModule="TheBookSummary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="second" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1ax-jO-Noc" customClass="FavouritesViewController" customModule="TheBookSummary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bSY-Ii-p48">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -385,7 +385,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="450" id="g7x-p7-cVG"/>
                                 </constraints>
-                                <mutableString key="text">A recurring dream troubles Santiago, a young and adventurous Andalusian shepherd. He has the dream every time he sleeps under a sycamore tree that grows out of the ruins of a church. During the dream, a child tells him to seek treasure at the foot of the Egyptian pyramids. Santiago consults a gypsy woman to interpret the dream, and to his surprise she tells him to go to Egypt. A strange, magical old man named Melchizedek, who claims to be the King of Salem, echoes the gypsy’s advice and tells Santiago that it is his Personal Legend to journey to the pyramids. Melchizedek convinces Santiago to sell his flock and set off to Tangier. When Santiago arrives in Tangier, a thief robs him, forcing him to find work with a local crystal merchant. The conservative and kindly merchant teaches Santiago several lessons, and Santiago encourages the merchant to take risks with his business. The risks pay off, and Santiago becomes a rich man in just a year.</mutableString>
+                                <string key="text">A recurring dream troubles Santiago, a young and adventurous Andalusian shepherd. He has the dream every time he sleeps under a sycamore tree that grows out of the ruins of a church. During the dream, a child tells him to seek treasure at the foot of the Egyptian pyramids. Santiago consults a gypsy woman to interpret the dream, and to his surprise she tells him to go to Egypt. A strange, magical old man named Melchizedek, who claims to be the King of Salem, echoes the gypsy’s advice and tells Santiago that it is his Personal Legend to journey to the pyramids. Melchizedek convinces Santiago to sell his flock and set off to Tangier. When Santiago arrives in Tangier, a thief robs him, forcing him to find work with a local crystal merchant. The conservative and kindly merchant teaches Santiago several lessons, and Santiago encourages the merchant to take risks with his business. The risks pay off, and Santiago becomes a rich man in just a year.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

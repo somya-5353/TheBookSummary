@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import CoreData
 
 class FavouritesViewController: UIViewController {
+
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -2,17 +2,11 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19A583" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="FavouriteBook" representedClassName="FavouriteBook" syncable="YES" codeGenerationType="class">
         <attribute name="author" optional="YES" attributeType="String"/>
+        <attribute name="genre" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>
-        <attribute name="imageName" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
-        <relationship name="genres" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Genre" inverseName="favourites" inverseEntity="Genre"/>
-    </entity>
-    <entity name="Genre" representedClassName="Genre" syncable="YES" codeGenerationType="class">
-        <attribute name="nameOfGenre" optional="YES" attributeType="String"/>
-        <relationship name="favourites" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FavouriteBook" inverseName="genres" inverseEntity="FavouriteBook"/>
     </entity>
     <elements>
-        <element name="FavouriteBook" positionX="-63" positionY="-18" width="128" height="118"/>
-        <element name="Genre" positionX="189.078125" positionY="153.4375" width="128" height="73"/>
+        <element name="FavouriteBook" positionX="-63" positionY="-18" width="128" height="103"/>
     </elements>
 </model>

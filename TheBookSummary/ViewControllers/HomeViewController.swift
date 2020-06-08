@@ -19,6 +19,8 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
     var selectionDelegate:GenreSelectionDelegation!
     var categoryItem:Categories?
     
+    private var coreDataManager = CoreDataManager(modelName: "Favourites")
+    
     private let sectionInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
     private let numberOfItemsInRow = 2
     
@@ -71,6 +73,7 @@ class HomeViewController: UIViewController, UICollectionViewDataSource, UICollec
         if segue.identifier == "collectionSegue" {
             if let vc = segue.destination as? SummaryViewController {
                 vc.categoryItem = self.categoryItem
+                vc.managedObjectContext = coreDataManager.managedObjectContext
             }
         }
     }
@@ -104,4 +107,4 @@ extension HomeViewController:UICollectionViewDelegateFlowLayout {
         return 2
     }
 }
-    
+

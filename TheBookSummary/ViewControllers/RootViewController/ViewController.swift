@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController{
 
@@ -14,7 +15,6 @@ class ViewController: UIViewController{
     
     var listOfGenres = Genres.getGenres()
     var selectedGenre:GenresAvailable = .unknown
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +80,7 @@ extension ViewController: UICollectionViewDelegate {
         homeVC.view.backgroundColor = UIColor.white
         homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .mostViewed, tag: 1)
         
-        let secondVC = FavouritesViewController()
+        let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "second") as! FavouritesViewController
         secondVC.view.backgroundColor = UIColor.white
         secondVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
         tabVc.viewControllers = [homeVC, secondVC]
