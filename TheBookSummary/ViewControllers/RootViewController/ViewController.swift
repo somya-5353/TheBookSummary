@@ -15,6 +15,8 @@ class ViewController: UIViewController{
     var listOfGenres = Genres.getGenres()
     var selectedGenre:GenresAvailable = .unknown
     
+    private var coreDataManager = CoreDataManager(modelName: "Favourites")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          // Do any additional setup after loading the view.
