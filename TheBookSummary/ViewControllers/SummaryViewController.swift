@@ -97,7 +97,6 @@ class SummaryViewController: UIViewController {
             favouritebook.genre = genre.rawValue
         }
         
-        
     }
     
 }
