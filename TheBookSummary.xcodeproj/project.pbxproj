@@ -28,6 +28,7 @@
 		EFCA634D248C18C300A93914 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA634C248C18C300A93914 /* Constants.swift */; };
 		EFD3FCE6248FC221000CBE3C /* ConvertToCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3FCE5248FC221000CBE3C /* ConvertToCategories.swift */; };
 		EFD3FCE8248FC3D3000CBE3C /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3FCE7248FC3D3000CBE3C /* ImageConstants.swift */; };
+		EFD3FCEA248FF8E5000CBE3C /* BooksByGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3FCE9248FF8E5000CBE3C /* BooksByGenre.swift */; };
 		EFE734DF248ECDF800312873 /* FavouriteBookItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE734DE248ECDF800312873 /* FavouriteBookItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		EFCA634C248C18C300A93914 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EFD3FCE5248FC221000CBE3C /* ConvertToCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertToCategories.swift; sourceTree = "<group>"; };
 		EFD3FCE7248FC3D3000CBE3C /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
+		EFD3FCE9248FF8E5000CBE3C /* BooksByGenre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksByGenre.swift; sourceTree = "<group>"; };
 		EFE734DE248ECDF800312873 /* FavouriteBookItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBookItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				EFD3FCE5248FC221000CBE3C /* ConvertToCategories.swift */,
+				EFD3FCE9248FF8E5000CBE3C /* BooksByGenre.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				EF079D6C24858A910076711B /* Categories.swift in Sources */,
 				EFD3FCE8248FC3D3000CBE3C /* ImageConstants.swift in Sources */,
 				EF26F7E32482813F003C8322 /* GenreTabBarViewController.swift in Sources */,
+				EFD3FCEA248FF8E5000CBE3C /* BooksByGenre.swift in Sources */,
 				EF26F7E524828180003C8322 /* HomeViewController.swift in Sources */,
 				EF854366247BB92D00EAADA9 /* Genres.swift in Sources */,
 				EFE734DF248ECDF800312873 /* FavouriteBookItemTableViewCell.swift in Sources */,

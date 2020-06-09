@@ -15,7 +15,7 @@ class Categories {
     var coverImage:UIImage
     var author:String
     var summary:String
-    
+
     init(title: String, coverImage: UIImage, author: String, summary: String) {
         self.title = title
         self.coverImage = coverImage
