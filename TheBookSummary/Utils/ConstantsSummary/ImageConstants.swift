@@ -10,7 +10,7 @@ import Foundation
 
 struct ImageName {
     
-    var dictOfImageNames:[String:String] = [
+    static let dictOfImageNames:[String:String] = [
         
         Summary.alchemist: "alchemist",
         Summary.fires: "littlefireseverywhere",
