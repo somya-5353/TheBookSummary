@@ -15,6 +15,7 @@ class ViewController: UIViewController{
     
     var listOfGenres = Genres.getGenres()
     var selectedGenre:GenresAvailable = .unknown
+    private var coreDataManager = CoreDataManager(modelName: "Favourites")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,10 +78,12 @@ extension ViewController: UICollectionViewDelegate {
         let tabVc = GenreTabBarViewController()
         let homeVC = self.storyboard?.instantiateViewController(identifier: "HomeViewController") as! HomeViewController
         homeVC.selectionDelegate = self
+        homeVC.managedObjectContext = coreDataManager.managedObjectContext
         homeVC.view.backgroundColor = UIColor.white
         homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .mostViewed, tag: 1)
         
         let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "second") as! FavouritesViewController
+        secondVC.managedObjectContext = coreDataManager.managedObjectContext
         secondVC.view.backgroundColor = UIColor.white
         secondVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
         tabVc.viewControllers = [homeVC, secondVC]
