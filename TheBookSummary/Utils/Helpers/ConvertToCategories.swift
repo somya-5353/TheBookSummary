@@ -11,6 +11,11 @@ import UIKit
 
 class Converter {
     
+    static func getImageName(id:Summary) -> String {
+        
+        
+    }
+    
     static func getListOfCategories(books: [FavouriteBook]) -> [Categories] {
         
         var listOfItems:[Categories] = []

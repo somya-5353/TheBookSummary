@@ -10,113 +10,62 @@ import Foundation
 
 struct ImageName {
     
-    static let alchemist = "alchemist"
-    
-    
-    static let fires = "littlefireseverywhere"
-    
-    static let david = "davidcopperfield"
-    
-    static let oliver = "olivertwist"
-    
-    static let light = "allthelightthatyoucannotsee"
-    
-    static let gone = "gonegirl"
-    
-    static let pride = "pride-and-prejudice"
-    
-    static let emma = "emma"
-    
-    static let wuthering = "wutheringheights"
-    
-    static let clarissa = "clarissa"
-    
-    static let treasure = "treasureisland"
-    
-    static let huckleberry = "finn"
-    
-    static let frank = "frank"
-    
-    static let three = "the-three-musketeers"
-    
-    static let robinson = "robinson"
-    
-    static let great = "greatexpectations"
-    
-    static let power = "powerofnow"
-    
-    static let rich = "richdad"
-    
-    static let subtle = "subtleart"
-    
-    static let becoming = "becoming"
-    
-    static let ikigai = "ikigai"
-    
-    static let crawdad = "crawdads"
-    
-    static let search = "search"
-    
-    static let atomic = "atomichabits"
-    
-    static let bird = "birdbox"
-    
-    static let orwell = "1984"
-    
-    static let lies = "biglittlelies"
-    
-    static let peril = "peril"
-    
-    static let orient = "orient"
-    
-    static let silkworm = "silkworm"
-    
-    static let cuckoo = "cuckoo"
-    
-    static let nile = "nile"
-    
-    static let cards = "cards"
-    
-    static let sleeping = "sleeping"
-    
-    static let christmas = "christmas"
-    
-    static let none = "andtherewerenone"
-    
-    static let water = "water"
-    
-    static let inferno = "inferno"
-    
-    static let kite = "thekiterunner"
-    
-    static let mountains = "mountains"
-    
-    static let anne = "annefrank"
-    
-    static let steve = "stevejobs "
-    
-    static let pearl = "pearl"
-    
-    static let malala = "malala"
-    
-    static let elon = "elonmusk"
-    
-    static let wings = "wingsoffire "
-    
-    static let mind = "mind"
-    
-    static let wild = "wild "
-    
-    static let little = "littlewoman1"
-    
-    static let jones = "tom"
-    
-    static let mocking = "mockingbird"
-    
-    static let lowland = "thelowland"
-    
-    static let veronica = "veronica"
-    
-    static let hounds = "hounds"
+    var dictOfImageNames:[String:String] = [
+        
+        Summary.alchemist: "alchemist",
+        Summary.fires: "littlefireseverywhere",
+        Summary.david: "davidcopperfield",
+        Summary.oliver: "olivertwist",
+        Summary.light: "allthelightthatyoucannotsee",
+        Summary.gone: "gonegirl",
+        Summary.pride: "pride-and-prejudice",
+        Summary.emma: "emma",
+        Summary.wuthering: "wutheringheights",
+        Summary.clarissa: "clarissa",
+        Summary.treasure: "treasureisland",
+        Summary.huckleberry: "finn",
+        Summary.frank: "frank",
+        Summary.three: "the-three-musketeers",
+        Summary.robinson: "robinson",
+        Summary.great: "greatexpectations",
+        Summary.power: "powerofnow",
+        Summary.rich: "richdad",
+        Summary.subtle: "subtleart",
+        Summary.becoming: "becoming",
+        Summary.crawdad: "crawdads",
+        Summary.ikigai: "ikigai",
+        Summary.search: "search",
+        Summary.atomic: "atomichabits",
+        Summary.bird: "birdbox",
+        Summary.orwell: "1984",
+        Summary.lies: "biglittlelies",
+        Summary.peril: "peril",
+        Summary.orient: "orient",
+        Summary.silkworm: "silkworm",
+        Summary.cuckoo: "cuckoo",
+        Summary.nile: "nile",
+        Summary.sleeping: "sleeping",
+        Summary.cards: "cards",
+        Summary.christmas: "christmas",
+        Summary.none: "andtherewerenone",
+        Summary.water: "water",
+        Summary.inferno: "inferno",
+        Summary.kite: "thekiterunner",
+        Summary.mocking: "mockingbird",
+        Summary.mountains: "mountains",
+        Summary.anne: "annefrank",
+        Summary.steve: "stevejobs",
+        Summary.pearl: "pearl",
+        Summary.malala: "malala",
+        Summary.elon: "elonmusk",
+        Summary.wings: "wingsoffire",
+        Summary.mind: "mind",
+        Summary.wild: "wild",
+        Summary.little: "littlewoman1",
+        Summary.jones: "tom",
+        Summary.lowland: "thelowland",
+        Summary.veronica: "veronica",
+        Summary.hounds: "hounds"
+    ]
     
 }
