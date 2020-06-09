@@ -26,6 +26,8 @@
 		EFCA6347248BFFBF00A93914 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA6346248BFFBF00A93914 /* DetailViewController.swift */; };
 		EFCA6349248C14C600A93914 /* Summaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA6348248C14C600A93914 /* Summaries.swift */; };
 		EFCA634D248C18C300A93914 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCA634C248C18C300A93914 /* Constants.swift */; };
+		EFD3FCE6248FC221000CBE3C /* ConvertToCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3FCE5248FC221000CBE3C /* ConvertToCategories.swift */; };
+		EFD3FCE8248FC3D3000CBE3C /* ImageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3FCE7248FC3D3000CBE3C /* ImageConstants.swift */; };
 		EFE734DF248ECDF800312873 /* FavouriteBookItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE734DE248ECDF800312873 /* FavouriteBookItemTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		EFCA6346248BFFBF00A93914 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EFCA6348248C14C600A93914 /* Summaries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summaries.swift; sourceTree = "<group>"; };
 		EFCA634C248C18C300A93914 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EFD3FCE5248FC221000CBE3C /* ConvertToCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertToCategories.swift; sourceTree = "<group>"; };
+		EFD3FCE7248FC3D3000CBE3C /* ImageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageConstants.swift; sourceTree = "<group>"; };
 		EFE734DE248ECDF800312873 /* FavouriteBookItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteBookItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +188,7 @@
 		EFCA634A248C169300A93914 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EFD3FCE4248FC1F0000CBE3C /* Helpers */,
 				EFCA634B248C187100A93914 /* ConstantsSummary */,
 			);
 			path = Utils;
@@ -193,8 +198,17 @@
 			isa = PBXGroup;
 			children = (
 				EFCA634C248C18C300A93914 /* Constants.swift */,
+				EFD3FCE7248FC3D3000CBE3C /* ImageConstants.swift */,
 			);
 			path = ConstantsSummary;
+			sourceTree = "<group>";
+		};
+		EFD3FCE4248FC1F0000CBE3C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EFD3FCE5248FC221000CBE3C /* ConvertToCategories.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,12 +288,14 @@
 				EF854355247BB02400EAADA9 /* ViewController.swift in Sources */,
 				EF079D702486ADFD0076711B /* BookCollectionCell.swift in Sources */,
 				EF862A19247FC47000BF6AD7 /* GenreCollectionCell.swift in Sources */,
+				EFD3FCE6248FC221000CBE3C /* ConvertToCategories.swift in Sources */,
 				EF079D722489382D0076711B /* SummaryViewController.swift in Sources */,
 				EFCA634D248C18C300A93914 /* Constants.swift in Sources */,
 				EF854351247BB02400EAADA9 /* AppDelegate.swift in Sources */,
 				EF079D7A248966CC0076711B /* CoreDataManager.swift in Sources */,
 				EF854353247BB02400EAADA9 /* SceneDelegate.swift in Sources */,
 				EF079D6C24858A910076711B /* Categories.swift in Sources */,
+				EFD3FCE8248FC3D3000CBE3C /* ImageConstants.swift in Sources */,
 				EF26F7E32482813F003C8322 /* GenreTabBarViewController.swift in Sources */,
 				EF26F7E524828180003C8322 /* HomeViewController.swift in Sources */,
 				EF854366247BB92D00EAADA9 /* Genres.swift in Sources */,
