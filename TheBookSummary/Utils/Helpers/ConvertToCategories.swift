@@ -17,10 +17,10 @@ class Converter {
         return value
     }
     
-    static func getListOfCategories(books: [FavouriteBook]) -> [Categories] {
+    static func getListOfCategories(books: [FavouriteBook]?) -> [Categories] {
         
         var listOfItems:[Categories] = []
-        for book in books {
+        for book in books! {
             let book_id = book.id ?? ""
             let imageName = self.getImageName(id: book_id)
             let item = Categories(title: book.title ?? "", coverImage: UIImage(named: imageName)!, author: book.author ?? "", summary: book_id)

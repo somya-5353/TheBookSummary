@@ -12,9 +12,11 @@ import CoreData
 class FavouritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var managedObjectContext: NSManagedObjectContext?
+    var listOfBooks:[Categories] = []
     
     private var favouriteBooks:[FavouriteBook]? {
         didSet {
+            self.listOfBooks = Converter.getListOfCategories(books: favouriteBooks)
             updateView()
         }
     }
@@ -34,7 +36,7 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
     
      override func viewDidLoad() {
         super.viewDidLoad()
-        self.setUpView()
+        setUpView()
         self.fetchFavouriteItems()
     }
     
@@ -43,9 +45,11 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
        self.tabBarController?.navigationItem.title = "Favourites"
     
   }
- 
-   func setUpView() {
+
+    func setUpView() {
         
+        favouriteTableView?.dataSource = self
+        favouriteTableView?.delegate = self
     }
     
     //function to fetch the favourite books from the persistent store
@@ -66,13 +70,16 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
     
     
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-           <#code#>
+            listOfBooks.count
        }
     
     
        
 func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           <#code#>
+       let cell = tableView.dequeueReusableCell(withIdentifier: "favouriteTableViewCell", for: indexPath) as! FavouriteBookItemTableViewCell
+       cell.bookItem = listOfBooks[indexPath.row]
+       return cell
+    
        }
        
     
