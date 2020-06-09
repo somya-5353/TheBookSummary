@@ -13,10 +13,12 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
     
     var managedObjectContext: NSManagedObjectContext?
     var listOfBooks:[Categories] = []
+    var dictOfBooksByGenre:[GenresAvailable:[Categories]] = [:]
     
     private var favouriteBooks:[FavouriteBook]? {
         didSet {
             self.listOfBooks = Converter.getListOfCategories(books: favouriteBooks)
+            self.dictOfBooksByGenre = BooksByGenre.categorizeBooksByGenre(listOfBooks: self.listOfBooks)
             updateView()
         }
     }
@@ -37,12 +39,13 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
      override func viewDidLoad() {
         super.viewDidLoad()
         setUpView()
-        self.fetchFavouriteItems()
+        ///self.fetchFavouriteItems()
     }
     
     override func viewWillAppear(_ animated: Bool) {
        super.viewWillAppear(animated)
        self.tabBarController?.navigationItem.title = "Favourites"
+       self.fetchFavouriteItems()
     
   }
 
@@ -51,7 +54,7 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
         favouriteTableView?.dataSource = self
         favouriteTableView?.delegate = self
         favouriteTableView?.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
-        favouriteTableView?.separatorColor = UIColor.white
+        favouriteTableView?.separatorColor = UIColor.lightGray
     }
     
     //function to fetch the favourite books from the persistent store
@@ -71,19 +74,60 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
         }
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        let keys = dictOfBooksByGenre.keys
+        return keys.count
+    }
+    
     
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            listOfBooks.count
-       }
+           let keys = dictOfBooksByGenre.keys
+           let keyArray = Array(keys)
+           let key = keyArray[section]
+           if let books = dictOfBooksByGenre[key] {
+            return books.count
+          }
+          return 0
+   }
     
     
        
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "favouriteTableViewCell", for: indexPath) as! FavouriteBookItemTableViewCell
-       cell.bookItem = listOfBooks[indexPath.row]
-       return cell
-    
+       let keys = dictOfBooksByGenre.keys
+       let keyArray = Array(keys)
+       let key = keyArray[indexPath.section]
+       if let books = dictOfBooksByGenre[key] {
+          let book = books[indexPath.row]
+          cell.bookItem = book
        }
-       
+       return cell
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let keys = dictOfBooksByGenre.keys
+        let keyArray = Array(keys)
+        let key = keyArray[section]
+        return key.rawValue
+    }
+    
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.backgroundColor = UIColor.black
+    }
+    
+    func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.backgroundColor = UIColor.black
+    }
     
 }

@@ -96,7 +96,12 @@ class SummaryViewController: UIViewController {
             let genre = Categories.getGenre(id: id)
             favouritebook.genre = genre.rawValue
         }
-        
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("Unable to set managed object context!!")
+        }
     }
+    
     
 }

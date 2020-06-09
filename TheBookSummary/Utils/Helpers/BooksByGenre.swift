@@ -44,11 +44,21 @@ class BooksByGenre {
             
         }
         
-        booksByGenre[.fiction] = fiction
-        booksByGenre[.biography] = biography
-        booksByGenre[.classic] = classic
-        booksByGenre[.selfhelp] = selfHelp
-        booksByGenre[.thriller] = thriller
+        if fiction.count>0 {
+           booksByGenre[.fiction] = fiction
+        }
+        if biography.count>0 {
+           booksByGenre[.biography] = biography
+        }
+        if classic.count>0 {
+           booksByGenre[.classic] = classic
+        }
+        if selfHelp.count>0 {
+           booksByGenre[.selfhelp] = selfHelp
+        }
+        if thriller.count>0 {
+           booksByGenre[.thriller] = thriller
+        }
         return booksByGenre
     }
 }
