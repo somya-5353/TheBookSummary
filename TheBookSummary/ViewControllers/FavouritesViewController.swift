@@ -50,6 +50,8 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
         
         favouriteTableView?.dataSource = self
         favouriteTableView?.delegate = self
+        favouriteTableView?.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+        favouriteTableView?.separatorColor = UIColor.white
     }
     
     //function to fetch the favourite books from the persistent store
@@ -60,6 +62,7 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
             do {
                 let books = try fetchRequest.execute()
                 self.favouriteBooks = books
+                print(self.favouriteBooks)
                 self.favouriteTableView.reloadData()
             } catch {
                 let fetchError = error as NSError

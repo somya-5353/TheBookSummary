@@ -31,8 +31,9 @@ class FavouriteBookItemTableViewCell: UITableViewCell {
             self.titleLabel.adjustsFontSizeToFitWidth = true
             self.authorLabel.numberOfLines = 1
             self.authorLabel.adjustsFontSizeToFitWidth = true
-            self.bookCoverImage.layer.cornerRadius = 40
+            self.bookCoverImage.layer.cornerRadius = self.bookCoverImage.frame.height/2
             self.bookCoverImage.layer.borderWidth = 2
+            self.bookCoverImage.layer.borderColor = UIColor.white.cgColor
             self.bookCoverImage.layer.masksToBounds = true
         } else {
             self.titleLabel.text = nil
