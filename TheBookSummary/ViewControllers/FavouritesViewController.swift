@@ -147,5 +147,15 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
         cell?.backgroundColor = UIColor.black
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Remove") { (_, _, completionHandler) in
+            self.listOfBooks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            completionHandler(true)
+        }
+        deleteAction.backgroundColor = UIColor.red
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
     
 }

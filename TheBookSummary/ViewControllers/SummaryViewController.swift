@@ -29,6 +29,7 @@ class SummaryViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        fetchFavouriteItems()
         self.setUpUI()
     }
     
@@ -46,7 +47,11 @@ class SummaryViewController: UIViewController {
             self.titleLabel.numberOfLines = 0
             self.titleLabel.adjustsFontSizeToFitWidth = true
             self.authorLabel.adjustsFontSizeToFitWidth = true
-            bookmarkButton.setImage(UIImage(named: "uncheckedBookmark"), for: .normal)
+            if self.isBookmarked == false {
+             bookmarkButton.setImage(UIImage(named: "uncheckedBookmark"), for: .normal)
+            } else {
+             bookmarkButton.setImage(UIImage(named: "Bookmark"), for: .normal)
+            }
         } else {
             self.coverImage.image = nil
             self.titleLabel.text = nil
@@ -59,9 +64,7 @@ class SummaryViewController: UIViewController {
     
     self.performSegue(withIdentifier: "detailSegue", sender: self)
    
-    
-    
-    }
+}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -72,6 +75,28 @@ class SummaryViewController: UIViewController {
            }
         }
     }
+    
+    //function to fetch data from the persistent store
+    private func fetchFavouriteItems() {
+    
+      let fetchRequest: NSFetchRequest<FavouriteBook> = FavouriteBook.fetchRequest()
+      managedObjectContext?.performAndWait {
+        do {
+            let books = try fetchRequest.execute()
+            for book in books {
+                if let id = book.id {
+                    if id == self.categoryItem?.summary {
+                        self.isBookmarked = true
+                    }
+                }
+            }
+        }
+        catch {
+            let fetchError = error as NSError
+            print("Unable to fetch request!")
+        }
+    }
+}
     
     @IBAction func onTapBookmark(_ sender: Any) {
         
