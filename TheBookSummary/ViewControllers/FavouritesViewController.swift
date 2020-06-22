@@ -14,6 +14,7 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
     var managedObjectContext: NSManagedObjectContext?
     var listOfBooks:[Categories] = []
     var dictOfBooksByGenre:[GenresAvailable:[Categories]] = [:]
+    var book:Categories?
     
     private var favouriteBooks:[FavouriteBook]? {
         didSet {
@@ -117,8 +118,24 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.deselectRow(at: indexPath, animated: true)
+        let keys = dictOfBooksByGenre.keys
+        let keyArray = Array(keys)
+        let key = keyArray[indexPath.section]
+        if let books = dictOfBooksByGenre[key] {
+            self.book = books[indexPath.row]
+        }
+        let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "detail") as! DetailViewController
+        detailVC.selectedBook = self.book
+        detailVC.isFavourite = true
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.pushViewController(detailVC, animated: false)
+        
+        
     }
+    
     
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
@@ -129,5 +146,6 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
         let cell = tableView.cellForRow(at: indexPath)
         cell?.backgroundColor = UIColor.black
     }
+    
     
 }

@@ -68,6 +68,7 @@ class SummaryViewController: UIViewController {
         if segue.identifier == "detailSegue" {
            if let vc = segue.destination as? DetailViewController {
               vc.selectedBook = self.categoryItem
+              vc.isFavourite = false
            }
         }
     }

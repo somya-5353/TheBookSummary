@@ -482,6 +482,7 @@
                         <viewLayoutGuide key="safeArea" id="sTq-kh-Iqy"/>
                     </view>
                     <connections>
+                        <outlet property="overviewHeaderLabel" destination="JGD-r9-M5g" id="sQf-RI-9SR"/>
                         <outlet property="summaryTextView" destination="55b-Sv-SG1" id="Nvw-eX-vPm"/>
                         <outlet property="titleLabel" destination="jCC-tL-Ons" id="1Ww-Xh-DMf"/>
                     </connections>
