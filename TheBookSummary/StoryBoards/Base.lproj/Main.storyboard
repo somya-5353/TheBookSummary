@@ -180,7 +180,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="Hla-0U-Whd"/>
                     <connections>
-                        <outlet property="favouriteTableView" destination="inx-1o-Hy8" id="2et-vS-Iti"/>
+                        <outlet property="favouriteTableView" destination="inx-1o-Hy8" id="O1l-lZ-bXE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MzB-dU-YOZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

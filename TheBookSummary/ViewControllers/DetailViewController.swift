@@ -37,9 +37,14 @@ class DetailViewController: UIViewController {
             if let flag = self.isFavourite {
                 if flag == true {
                     self.overviewHeaderLabel.isHidden = true
+                    self.navigationItem.title = "OVERVIEW"
+                self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white,
+                                                                                         NSAttributedString.Key.font: UIFont(name: "Bradley Hand", size: 24)!,]
+                    self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+                    }
                 }
             }
-        } else {
+         else {
             self.titleLabel.text = nil
             self.summaryTextView.text = nil
         }

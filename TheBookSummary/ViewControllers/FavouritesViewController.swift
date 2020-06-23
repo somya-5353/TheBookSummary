@@ -11,6 +11,8 @@ import CoreData
 
 class FavouritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var favouriteTableView: UITableView!
+    
     var managedObjectContext: NSManagedObjectContext?
     var listOfBooks:[Categories] = []
     var dictOfBooksByGenre:[GenresAvailable:[Categories]] = [:]
@@ -29,7 +31,7 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
         return books.count>0
        }
        
-    @IBOutlet weak var favouriteTableView: UITableView!
+
     
     //function to update the view
     func updateView() {
@@ -47,6 +49,7 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
        super.viewWillAppear(animated)
        self.tabBarController?.navigationItem.title = "Favourites"
        self.fetchFavouriteItems()
+        self.animateTable()
     
   }
 
@@ -156,6 +159,28 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
         }
         deleteAction.backgroundColor = UIColor.red
         return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+    //to animate the cells in table view
+    func animateTable() {
+        
+       // self.favouriteTableView.reloadData()
+        let cells = self.favouriteTableView.visibleCells
+        let height = self.favouriteTableView.bounds.size.height
+        
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: height)
+        }
+        
+        var delayCounter = 0
+        
+        for cell in cells {
+            UIView.animate(withDuration: 1.75, delay: Double(delayCounter)*0.05, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                cell.transform = CGAffineTransform.identity
+            }, completion: nil)
+            delayCounter+=1
+        }
+        
     }
     
 }
