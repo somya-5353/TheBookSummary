@@ -1,6 +1,12 @@
 # TheBookSummary
 The Book Summary app provides a brief overview of a large collection of books across multiple genres: fiction, classics, Biographies, Thrillers and self Help. Designed and developed in MVC architecture using Swift concepts like protocols and delegation, Core Data, Collection Views and Navigation and UIView Animations. 
 
+Video
+
+<video width="320" height="240" controls>
+  <source src="bookSummary.mov" type="video/mp4">
+</video>
+
 Landing Screen                                                                                     
 
 ![landingScreen](https://user-images.githubusercontent.com/52540948/85558092-0c62f800-b646-11ea-8b8c-a3a922b4d71c.png)             
