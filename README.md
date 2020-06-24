@@ -12,7 +12,7 @@ Genre Screen
 
 Summary Screen
 
-![summary](https://user-images.githubusercontent.com/52540948/85490866-283baf00-b5f0-11ea-8504-a302aeaa711a.png)
+
 
 
 
