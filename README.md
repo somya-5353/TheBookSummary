@@ -10,6 +10,10 @@ Genre Screen
 
 ![genreList](https://user-images.githubusercontent.com/52540948/85490838-1e19b080-b5f0-11ea-990c-a0663b53dbf9.png)
 
+Summary Screen
+
+![summary](https://user-images.githubusercontent.com/52540948/85490866-283baf00-b5f0-11ea-8504-a302aeaa711a.png)
+
 
 
 
