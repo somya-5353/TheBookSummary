@@ -3,4 +3,4 @@ The Book Summary app provides a brief overview of a large collection of books ac
 
 Landing Screen
 
-![favourite](https://user-images.githubusercontent.com/52540948/85442826-39fc6280-b5ae-11ea-9bea-6d6dcc1d399b.png)
+![landingScreen](https://user-images.githubusercontent.com/52540948/85490071-c0d12f80-b5ee-11ea-8ee9-9f2f36dfe2f8.png
