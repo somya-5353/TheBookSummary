@@ -4,6 +4,7 @@ The Book Summary app provides a brief overview of a large collection of books ac
 GIFs
 
 ![2020-06-24 18 35 06](https://user-images.githubusercontent.com/52540948/85561887-9b254400-b649-11ea-8fc1-afdbd08c8a96.gif)
+![2020-06-24 18 33 02](https://user-images.githubusercontent.com/52540948/85562102-cc9e0f80-b649-11ea-9ac1-f5f8a5dadfd6.gif)
 
 Landing Screen                                                                                     
 
